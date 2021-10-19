@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    tools:context=".Detailed_group">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/back_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="14dp"
+                    android:src="@drawable/arrow_back"
+                    android:background="#4568E4"/>
+
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    app:title="O группe"
+                    app:titleTextColor="@color/white" />
+            </LinearLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            xmlns:de.hdodenhof="http://schemas.android.com/apk/res-auto"
+
+            android:layout_margin="16dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <ImageView
+                    android:id="@+id/det_card_image_view"
+                    style="@style/Shapeable_images"
+                    android:layout_width="89dp"
+                    android:layout_height="56dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="19dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:src="@drawable/bikeclub" />
+
+
+                <TextView
+                    android:id="@+id/cards_text_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="26dp"
+                    android:layout_toRightOf="@+id/det_card_image_view"
+                    android:text="название мероприятия"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+        <TextView
+            android:id="@+id/titleOfclub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Клуб велосипедистов "
+            android:background="@color/white"
+            android:layout_margin="16dp"
+            android:textColor="@color/black"
+            android:textSize="22sp"/>
+
+        <RelativeLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cards_tv_online"
+            android:layout_margin="16dp"
+            android:layout_toRightOf="@+id/cards_image_view">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/shapeableFoto"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/prof5"
+               app:shapeAppearanceOverlay="@style/round_images" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/sFoto"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="-4dp"
+                android:layout_toRightOf="@+id/shapeableFoto"
+                android:src="@drawable/prof2"
+                app:shapeAppearanceOverlay="@style/round_images" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/prof4"
+                android:layout_toRightOf="@+id/sFoto"
+                android:layout_marginStart="-4dp"
+                app:shapeAppearanceOverlay="@style/round_images"
+                />
+
+            <TextView
+                android:id="@+id/membersNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="55dp"
+                android:layout_toRightOf="@+id/sFoto"
+                android:text="158 " />
+            <TextView
+
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_toRightOf="@+id/membersNum"
+                android:text="участников" />
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/imgofClub"
+            android:layout_width="244dp"
+            android:layout_height="155dp"
+            android:layout_marginStart="24dp"
+            android:src="@color/white"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="19sp"
+            android:textColor="@color/black"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:text="Описание"/>
+
+
+        <TextView
+            android:id="@+id/descriptionClub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#4568E4"
+            android:layout_margin="24dp"
+            android:text="о"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="19sp"
+            android:textColor="@color/black"
+            android:layout_marginStart="24dp"
+            android:text="Интересы"/>
+
+
+        <TextView
+            android:id="@+id/interestOfClub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#4568E4"
+            android:layout_margin="24dp"
+            android:text="Целый ряд интересов невозможно не описывать"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="19sp"
+            android:textColor="@color/black"
+            android:layout_marginStart="24dp"
+            android:text="Категория"/>
+
+        <TextView
+            android:id="@+id/categoryClub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="#4568E4"
+            android:layout_margin="24dp"
+            android:text="Активный отдых"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/shapeable_buttons"
+            android:onClick="joinGroup"
+            android:layout_margin="16dp"/>
+
+
+    </LinearLayout>
+
+</ScrollView>

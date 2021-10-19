@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@color/white"
+        android:orientation="vertical"
+        >
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/back_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="14dp"
+                    android:src="@drawable/arrow_back"
+                    android:background="#4568E4"/>
+
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="72dp"
+                    app:title="Регистрация"
+                    app:titleTextColor="@color/white" />
+            </LinearLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:helperTextEnabled="true"
+            app:helperText="Введите ваш E-mail"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:hint="Email"
+                android:textColorHint="#8E8DA9"
+                android:layout_width="match_parent"
+                android:id="@+id/edit_Email"
+                android:layout_height="56dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:inputType="textEmailSubject"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:endIconMode="password_toggle"
+            app:helperTextEnabled="true"
+            app:helperText="Введите ваш пароль"
+            app:counterEnabled="true"
+            app:counterMaxLength="20"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+            >
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:id="@+id/textIn"
+                android:hint="Пароль"
+                android:textColorHint="#8E8DA9"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:endIconMode="password_toggle"
+            app:helperTextEnabled="true"
+            app:helperText=" Повторите пароль"
+            app:counterMaxLength="20"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+            >
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:id="@+id/InputPassword"
+                android:hint="Пароль"
+                android:textColorHint="#8E8DA9"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <Button
+            android:id="@+id/nextToPage"
+            android:onClick="next"
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:background="@drawable/shaper"
+            android:text="Далее"
+            android:layout_margin="16dp"
+            />
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="16dp">
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="1dp"
+                android:background="#E0E2ED"
+                android:layout_marginEnd="10dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="или"
+                android:layout_marginBottom="6dp"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="1dp"
+                android:background="#E0E2ED"
+                android:layout_marginStart="10dp"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:layout_height = "wrap_content"
+                android:layout_width = "wrap_content"
+                android:textSize = "12sp"
+                android:text="Уже есть аккаунт?"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:onClick="EnterToMain"
+                android:layout_height = "wrap_content"
+                android:layout_width = "wrap_content"
+                android:textColor ="#A7A7B8"
+                android:text="Войдите!"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/card_event"
+    xmlns:de.hdodenhof="http://schemas.android.com/apk/res-auto"
+
+    android:layout_margin="16dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageView
+            android:id="@+id/cards_image_view"
+            style="@style/Shapeable_images"
+            android:layout_width="89dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="19dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="6dp"
+            android:src="@drawable/bikeclub" />
+
+        <TextView
+            android:id="@+id/cards_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@+id/cards_image_view"
+            android:text="группа" />
+
+        <TextView
+            android:id="@+id/cards_text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cards_tv"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@+id/cards_image_view"
+            android:text="название"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/cards_tv_online"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_height="wrap_content"
+            android:text="Online,14:00"
+            android:layout_toRightOf="@+id/cards_image_view"
+            android:layout_below="@+id/cards_text_title"/>
+
+        <RelativeLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cards_tv_online"
+            android:layout_margin="6dp"
+            android:layout_toRightOf="@+id/cards_image_view">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/shapeableFoto"
+                android:layout_width="16dp"
+                android:scaleType="centerCrop"
+                android:layout_height="16dp"
+                android:src="@drawable/prof5"
+                de.hdodenhof:shapeAppearanceOverlay="@style/round_images" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/sFoto"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="-4dp"
+                android:scaleType="centerCrop"
+                android:layout_toRightOf="@+id/shapeableFoto"
+                android:src="@drawable/prof2"
+                de.hdodenhof:shapeAppearanceOverlay="@style/round_images" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="-4dp"
+                android:layout_toRightOf="@+id/sFoto"
+                android:src="@drawable/prof4"
+                de.hdodenhof:shapeAppearanceOverlay="@style/round_images" />
+
+            <TextView
+                android:id="@+id/membersNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="55dp"
+                android:layout_toRightOf="@+id/sFoto"
+                android:text="158 " />
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_toRightOf="@+id/membersNum"
+                android:text="участников" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>
