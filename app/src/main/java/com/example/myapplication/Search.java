@@ -23,6 +23,7 @@ public class Search extends AppCompatActivity {
     int year;
     int month;
     int day;
+
     @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +31,8 @@ public class Search extends AppCompatActivity {
         setContentView(R.layout.activity_search);
 
         mdateformat2 = findViewById(R.id.calendar);
+
+
 
         Calendar calendar = Calendar.getInstance();
         mdateformat2.setOnClickListener(new View.OnClickListener() {
@@ -46,8 +49,6 @@ public class Search extends AppCompatActivity {
                         //  mdateformat.setText(SimpleDateFormat.getDateInstance().format(calendar.getTime()));
                         //mdateformat2.setText(sDate);
 
-                        Intent intent = new Intent(Search.this, Search_result_event.class);
-                        startActivity(intent);
                     }
                 }, year,month,day);
                 datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis()-1000);

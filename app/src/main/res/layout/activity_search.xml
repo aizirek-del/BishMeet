@@ -7,34 +7,33 @@
     tools:context=".Search">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
+            android:layout_height="wrap_content">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                >
+                android:orientation="horizontal">
 
                 <ImageButton
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="#4568E4"
                     android:layout_marginTop="5dp"
-                    android:src="@drawable/ic_baseline_arrow_back_24"/>
+                    android:backgroundTint="#4568E4"
+                    android:src="@drawable/ic_baseline_arrow_back_24" />
 
                 <com.google.android.material.appbar.MaterialToolbar
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:titleTextColor="@color/white"
+                    android:layout_marginStart="15dp"
                     app:title="Поиск"
-                    android:layout_marginStart="15dp"/>
+                    app:titleTextColor="@color/white" />
             </LinearLayout>
         </com.google.android.material.appbar.AppBarLayout>
 
@@ -42,11 +41,12 @@
             android:id="@+id/search_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:iconifiedByDefault="false"
-            android:drawablePadding="10dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="5dp"
-            android:queryHint="Поиск групп и мероприятий"/>
+            android:drawablePadding="10dp"
+            android:iconifiedByDefault="false"
+            android:queryHint="Поиск групп и мероприятий" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -55,47 +55,65 @@
             <Button
                 android:layout_width="160dp"
                 android:layout_height="39dp"
+                android:shadowRadius="6"
                 android:text="Сегодня"
-                android:textSize="12dp"
-                android:shadowRadius="6"/>
+                android:textSize="12dp" />
+
             <Button
-                android:layout_marginStart="7dp"
                 android:layout_width="160dp"
                 android:layout_height="39dp"
+                android:layout_marginStart="7dp"
                 android:backgroundTint="#E0E2ED"
-                android:textColor="#202124"
                 android:shadowRadius="6"
                 android:text="Завтра"
-                android:textSize="12dp"/>
+                android:textColor="#202124"
+                android:textSize="12dp" />
         </LinearLayout>
 
         <Button
-            android:layout_marginStart="94dp"
             android:layout_width="180dp"
             android:layout_height="39dp"
+            android:layout_marginStart="94dp"
             android:backgroundTint="#E0E2ED"
-            android:textColor="#202124"
             android:shadowRadius="6"
             android:text="На следующей неделе"
-            android:textSize="12dp"/>
+            android:textColor="#202124"
+            android:textSize="12dp" />
 
-        git<ImageView
-        android:id="@+id/calendar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="300dp"
-        android:src="@drawable/ic_vector" />
+        <ImageView
+            android:id="@+id/calendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="300dp"
+            android:src="@drawable/ic_vector" />
 
         <Button
-            android:layout_marginStart="94dp"
             android:layout_width="180dp"
             android:layout_height="39dp"
+            android:layout_marginStart="94dp"
             android:backgroundTint="#E0E2ED"
-            android:textColor="#202124"
             android:shadowRadius="6"
             android:text="Популярные"
-            android:textSize="12dp"
-            />
+            android:textColor="@color/text_color_grey"
+            android:textSize="12dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_groups"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/list_layout" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_events"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/card_list_layout" />
 
     </LinearLayout>
 
