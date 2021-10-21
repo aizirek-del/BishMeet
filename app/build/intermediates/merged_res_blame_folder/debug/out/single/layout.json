@@ -20,10 +20,6 @@
         "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\layout\\activity_home_after_authorization.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\search_result.xml",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\layout\\search_result.xml"
-    },
-    {
         "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_calendar.xml",
         "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\layout\\fragment_calendar.xml"
     },

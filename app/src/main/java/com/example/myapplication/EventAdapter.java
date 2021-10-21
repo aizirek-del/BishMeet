@@ -63,10 +63,6 @@ import java.util.List;
                 in.putExtra("eventLocation",event.eventLocation);
 
                 context.startActivity(in);
-
-                Intent intent = new Intent(context,Event_detailed.class);
-                context.startActivity(intent);
-
             }
         });
     }

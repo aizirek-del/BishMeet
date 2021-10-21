@@ -1287,6 +1287,7 @@ color teal_200
 color teal_700
 color test_mtrl_calendar_day
 color test_mtrl_calendar_day_selected
+color text_color_grey
 color tooltip_background_dark
 color tooltip_background_light
 color white
@@ -2340,7 +2341,8 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
-id recycler_viewRSearch
+id recycler_events
+id recycler_groups
 id registerButton
 id registerUser
 id resetBack_btn
@@ -2664,7 +2666,6 @@ layout notification_template_media
 layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
-layout search_result
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material

@@ -4,25 +4,48 @@ package com.example.myapplication.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.ScrollView;
+import android.widget.SearchView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.example.myapplication.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
+import java.lang.String;
 
 public final class ActivitySearchBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final ScrollView rootView;
 
-  private ActivitySearchBinding(@NonNull ConstraintLayout rootView) {
+  @NonNull
+  public final ImageView calendar;
+
+  @NonNull
+  public final RecyclerView recyclerEvents;
+
+  @NonNull
+  public final RecyclerView recyclerGroups;
+
+  @NonNull
+  public final SearchView searchView;
+
+  private ActivitySearchBinding(@NonNull ScrollView rootView, @NonNull ImageView calendar,
+      @NonNull RecyclerView recyclerEvents, @NonNull RecyclerView recyclerGroups,
+      @NonNull SearchView searchView) {
     this.rootView = rootView;
+    this.calendar = calendar;
+    this.recyclerEvents = recyclerEvents;
+    this.recyclerGroups = recyclerGroups;
+    this.searchView = searchView;
   }
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public ScrollView getRoot() {
     return rootView;
   }
 
@@ -43,10 +66,38 @@ public final class ActivitySearchBinding implements ViewBinding {
 
   @NonNull
   public static ActivitySearchBinding bind(@NonNull View rootView) {
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
-    }
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.calendar;
+      ImageView calendar = ViewBindings.findChildViewById(rootView, id);
+      if (calendar == null) {
+        break missingId;
+      }
 
-    return new ActivitySearchBinding((ConstraintLayout) rootView);
+      id = R.id.recycler_events;
+      RecyclerView recyclerEvents = ViewBindings.findChildViewById(rootView, id);
+      if (recyclerEvents == null) {
+        break missingId;
+      }
+
+      id = R.id.recycler_groups;
+      RecyclerView recyclerGroups = ViewBindings.findChildViewById(rootView, id);
+      if (recyclerGroups == null) {
+        break missingId;
+      }
+
+      id = R.id.search_view;
+      SearchView searchView = ViewBindings.findChildViewById(rootView, id);
+      if (searchView == null) {
+        break missingId;
+      }
+
+      return new ActivitySearchBinding((ScrollView) rootView, calendar, recyclerEvents,
+          recyclerGroups, searchView);
+    }
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

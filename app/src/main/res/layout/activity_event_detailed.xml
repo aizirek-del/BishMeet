@@ -188,7 +188,7 @@
                 android:id="@+id/description_event_detailed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Но высокое качество позиционных исследований требует от нас анализа поставленных обществом задач. И нет сомнений, что предприниматели в сети интернет лишь добавляют."
+                tools:text="Но высокое качество позиционных исследований требует от нас анализа поставленных обществом задач. И нет сомнений, что предприниматели в сети интернет лишь добавляют."
                 android:textColor="#202124"
                 android:textSize="14sp"
                 android:layout_margin="16dp"
