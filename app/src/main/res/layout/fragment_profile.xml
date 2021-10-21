@@ -107,6 +107,77 @@
                 />
 
         </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Мои группы"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/profile_hor_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="36dp"
+            android:layout_marginStart="16dp"
+            android:background="@color/white"
+
+            >
+        </androidx.recyclerview.widget.RecyclerView>
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/prog"
+            android:layout_marginTop="16dp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="45dp">
+
+            <TextView
+                android:id="@+id/events"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Мои мероприятия"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/in_prog"
+                android:layout_marginTop="16dp"
+                />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/profiles_vert_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                tools:listitem="@layout/card_list_layout">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+        </LinearLayout>
 
     </LinearLayout>
 

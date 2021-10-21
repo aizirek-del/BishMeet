@@ -7,10 +7,12 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.myapplication.R;
@@ -33,6 +35,12 @@ public final class FragmentProfileBinding implements ViewBinding {
   public final ImageView editProfilePage;
 
   @NonNull
+  public final TextView events;
+
+  @NonNull
+  public final ProgressBar inProg;
+
+  @NonNull
   public final TextView myProfileCity;
 
   @NonNull
@@ -42,21 +50,37 @@ public final class FragmentProfileBinding implements ViewBinding {
   public final TextView myprofileSurname;
 
   @NonNull
+  public final RecyclerView profileHorRecyclerView;
+
+  @NonNull
   public final LinearLayout profilesLayout;
+
+  @NonNull
+  public final RecyclerView profilesVertRecyclerView;
+
+  @NonNull
+  public final ProgressBar prog;
 
   private FragmentProfileBinding(@NonNull ScrollView rootView,
       @NonNull ShapeableImageView MyProfileFoto, @NonNull ImageButton backArrow,
-      @NonNull ImageView editProfilePage, @NonNull TextView myProfileCity,
-      @NonNull TextView myprofileName, @NonNull TextView myprofileSurname,
-      @NonNull LinearLayout profilesLayout) {
+      @NonNull ImageView editProfilePage, @NonNull TextView events, @NonNull ProgressBar inProg,
+      @NonNull TextView myProfileCity, @NonNull TextView myprofileName,
+      @NonNull TextView myprofileSurname, @NonNull RecyclerView profileHorRecyclerView,
+      @NonNull LinearLayout profilesLayout, @NonNull RecyclerView profilesVertRecyclerView,
+      @NonNull ProgressBar prog) {
     this.rootView = rootView;
     this.MyProfileFoto = MyProfileFoto;
     this.backArrow = backArrow;
     this.editProfilePage = editProfilePage;
+    this.events = events;
+    this.inProg = inProg;
     this.myProfileCity = myProfileCity;
     this.myprofileName = myprofileName;
     this.myprofileSurname = myprofileSurname;
+    this.profileHorRecyclerView = profileHorRecyclerView;
     this.profilesLayout = profilesLayout;
+    this.profilesVertRecyclerView = profilesVertRecyclerView;
+    this.prog = prog;
   }
 
   @Override
@@ -104,6 +128,18 @@ public final class FragmentProfileBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.events;
+      TextView events = ViewBindings.findChildViewById(rootView, id);
+      if (events == null) {
+        break missingId;
+      }
+
+      id = R.id.in_prog;
+      ProgressBar inProg = ViewBindings.findChildViewById(rootView, id);
+      if (inProg == null) {
+        break missingId;
+      }
+
       id = R.id.myProfile_city;
       TextView myProfileCity = ViewBindings.findChildViewById(rootView, id);
       if (myProfileCity == null) {
@@ -122,14 +158,33 @@ public final class FragmentProfileBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.profile_hor_recycler_view;
+      RecyclerView profileHorRecyclerView = ViewBindings.findChildViewById(rootView, id);
+      if (profileHorRecyclerView == null) {
+        break missingId;
+      }
+
       id = R.id.profiles_layout;
       LinearLayout profilesLayout = ViewBindings.findChildViewById(rootView, id);
       if (profilesLayout == null) {
         break missingId;
       }
 
+      id = R.id.profiles_vert_recycler_view;
+      RecyclerView profilesVertRecyclerView = ViewBindings.findChildViewById(rootView, id);
+      if (profilesVertRecyclerView == null) {
+        break missingId;
+      }
+
+      id = R.id.prog;
+      ProgressBar prog = ViewBindings.findChildViewById(rootView, id);
+      if (prog == null) {
+        break missingId;
+      }
+
       return new FragmentProfileBinding((ScrollView) rootView, MyProfileFoto, backArrow,
-          editProfilePage, myProfileCity, myprofileName, myprofileSurname, profilesLayout);
+          editProfilePage, events, inProg, myProfileCity, myprofileName, myprofileSurname,
+          profileHorRecyclerView, profilesLayout, profilesVertRecyclerView, prog);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

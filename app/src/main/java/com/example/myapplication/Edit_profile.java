@@ -132,7 +132,7 @@ public class Edit_profile extends AppCompatActivity {
                             Log.e("Edit_Profile", "Done OnComplete");
                             Toast.makeText(Edit_profile.this, "Добавлена", Toast.LENGTH_LONG).show();
                             finish();
-                            pd.dismiss();
+
                         }
                     })
                     .addOnFailureListener(new OnFailureListener() {

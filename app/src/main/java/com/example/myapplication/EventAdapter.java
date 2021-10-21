@@ -1,6 +1,8 @@
 package com.example.myapplication;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,15 +11,19 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
+import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class EventAdapter extends RecyclerView.Adapter<EventViewHolder> {
+ public class EventAdapter extends RecyclerView.Adapter<EventViewHolder> {
     Context context;
     private List<NewEvent> eventDataList ;
 
-    public EventAdapter(List<NewEvent> eventDataList) {
+    public EventAdapter(FragmentActivity activity, List<NewEvent> eventDataList) {
+        this.context = activity;
         this.eventDataList = eventDataList;
     }
 
@@ -35,41 +41,32 @@ public class EventAdapter extends RecyclerView.Adapter<EventViewHolder> {
         NewEvent event = eventDataList.get(position);
         holder.cards_tv.setText(event.groups);
         holder.tv_descrip.setText(event.eventDescription);
-        holder.tv_participants.setText(event.users.size() +" участников");
+//       holder.tv_participants.setText(event.users.size() +" участников");
 
-//        Picasso.get()
-//                .load(Uri.parse(event.EventImage))
-//                .into(holder.event_imgView, new Callback() {
-//                    @Override
-//                    public void onSuccess() {
-//                    }
-//                    @Override
-//                    public void onError(Exception e) {
-//
-//                    }
-//                });
-//        Picasso.get().load(Uri.parse(event.userImg)).
-//                into(holder.partic_img, new Callback() {
-//                    @Override
-//                    public void onSuccess() {
-//
-//                    }
-//
-//                    @Override
-//                    public void onError(Exception e) {
-//
-//                    }
-//                });
+        Picasso.get()
+                .load(event.event_image)
+                .into(holder.event_imgView);
+//        Picasso.get().
+//                load(Uri.parse(event.)).
+//                into(holder.partic_img );
+
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Intent in = new Intent(context,Detailed_event.class);
-//                in.putExtra("title",gr.title);
-//                //  in.putExtra("image",gr.imageUri);
-//                in.putExtra("description",gr.decription);
-//                in.putExtra("interest",gr.interest);
-//                in.putExtra("category",gr.category);
-//                context.startActivity(in);
+
+                Intent in = new Intent(context,Event_detailed.class);
+
+                in.putExtra("eventTitle",event.eventTitle);
+                 in.putExtra("event_image",event.event_image);
+                in.putExtra("eventDescription",event.eventDescription);
+                in.putExtra("event_date",event.Event_date);
+                in.putExtra("eventLocation",event.eventLocation);
+
+                context.startActivity(in);
+
+                Intent intent = new Intent(context,Event_detailed.class);
+                context.startActivity(intent);
+
             }
         });
     }
@@ -91,13 +88,12 @@ class EventViewHolder extends RecyclerView.ViewHolder{
     public EventViewHolder(@NonNull View itemView){
         super(itemView);
 
-        event_imgView = itemView.findViewById(R.id.cards_image_view);
-        partic_img = itemView.findViewById(R.id.shapeableFoto);
+        event_imgView = itemView.findViewById(R.id.events_image_view);
+        partic_img = itemView.findViewById(R.id.participants_foto);
         cards_tv = itemView.findViewById(R.id.cards_tv);
         tv_descrip = itemView.findViewById(R.id.cards_text_title);
         tv_participants = itemView.findViewById(R.id.membersNum);
         cardView = itemView.findViewById(R.id.card_event);
-
     }
 
 }

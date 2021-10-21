@@ -25,9 +25,6 @@ public final class CardListLayoutBinding implements ViewBinding {
   public final MaterialCardView cardEvent;
 
   @NonNull
-  public final ImageView cardsImageView;
-
-  @NonNull
   public final TextView cardsTextTitle;
 
   @NonNull
@@ -37,28 +34,31 @@ public final class CardListLayoutBinding implements ViewBinding {
   public final TextView cardsTvOnline;
 
   @NonNull
+  public final ImageView eventsImageView;
+
+  @NonNull
   public final TextView membersNum;
+
+  @NonNull
+  public final ShapeableImageView participantsFoto;
 
   @NonNull
   public final ShapeableImageView sFoto;
 
-  @NonNull
-  public final ShapeableImageView shapeableFoto;
-
   private CardListLayoutBinding(@NonNull MaterialCardView rootView,
-      @NonNull MaterialCardView cardEvent, @NonNull ImageView cardsImageView,
-      @NonNull TextView cardsTextTitle, @NonNull TextView cardsTv, @NonNull TextView cardsTvOnline,
-      @NonNull TextView membersNum, @NonNull ShapeableImageView sFoto,
-      @NonNull ShapeableImageView shapeableFoto) {
+      @NonNull MaterialCardView cardEvent, @NonNull TextView cardsTextTitle,
+      @NonNull TextView cardsTv, @NonNull TextView cardsTvOnline,
+      @NonNull ImageView eventsImageView, @NonNull TextView membersNum,
+      @NonNull ShapeableImageView participantsFoto, @NonNull ShapeableImageView sFoto) {
     this.rootView = rootView;
     this.cardEvent = cardEvent;
-    this.cardsImageView = cardsImageView;
     this.cardsTextTitle = cardsTextTitle;
     this.cardsTv = cardsTv;
     this.cardsTvOnline = cardsTvOnline;
+    this.eventsImageView = eventsImageView;
     this.membersNum = membersNum;
+    this.participantsFoto = participantsFoto;
     this.sFoto = sFoto;
-    this.shapeableFoto = shapeableFoto;
   }
 
   @Override
@@ -90,12 +90,6 @@ public final class CardListLayoutBinding implements ViewBinding {
     missingId: {
       MaterialCardView cardEvent = (MaterialCardView) rootView;
 
-      id = R.id.cards_image_view;
-      ImageView cardsImageView = ViewBindings.findChildViewById(rootView, id);
-      if (cardsImageView == null) {
-        break missingId;
-      }
-
       id = R.id.cards_text_title;
       TextView cardsTextTitle = ViewBindings.findChildViewById(rootView, id);
       if (cardsTextTitle == null) {
@@ -114,9 +108,21 @@ public final class CardListLayoutBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.events_image_view;
+      ImageView eventsImageView = ViewBindings.findChildViewById(rootView, id);
+      if (eventsImageView == null) {
+        break missingId;
+      }
+
       id = R.id.membersNum;
       TextView membersNum = ViewBindings.findChildViewById(rootView, id);
       if (membersNum == null) {
+        break missingId;
+      }
+
+      id = R.id.participants_foto;
+      ShapeableImageView participantsFoto = ViewBindings.findChildViewById(rootView, id);
+      if (participantsFoto == null) {
         break missingId;
       }
 
@@ -126,14 +132,8 @@ public final class CardListLayoutBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.shapeableFoto;
-      ShapeableImageView shapeableFoto = ViewBindings.findChildViewById(rootView, id);
-      if (shapeableFoto == null) {
-        break missingId;
-      }
-
-      return new CardListLayoutBinding((MaterialCardView) rootView, cardEvent, cardsImageView,
-          cardsTextTitle, cardsTv, cardsTvOnline, membersNum, sFoto, shapeableFoto);
+      return new CardListLayoutBinding((MaterialCardView) rootView, cardEvent, cardsTextTitle,
+          cardsTv, cardsTvOnline, eventsImageView, membersNum, participantsFoto, sFoto);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

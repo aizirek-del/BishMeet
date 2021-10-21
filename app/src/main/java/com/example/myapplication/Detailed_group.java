@@ -67,6 +67,7 @@ public class Detailed_group extends AppCompatActivity {
             tvdesc.setText(in.getStringExtra("description"));
             tvInterest.setText(in.getStringExtra("interest"));
             tvCategory.setText(in.getStringExtra("category"));
+            startActivity(in);
         }
 
 

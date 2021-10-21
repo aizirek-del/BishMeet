@@ -35,9 +35,16 @@ public class HomeFragment extends Fragment {
     ImageView iV;
     GroupsAdapter mAdapter;
     RecyclerView mRecyclerView;
-ImageView searchIV;
-    private final List<NewGroupData> mItems = new ArrayList<>();
 
+    private final List<NewGroupData> mItems = new ArrayList<>();
+    // vertical list of events
+    RecyclerView verticalRecView;
+    EventAdapter eventAdapter;
+    DatabaseReference mDatareference;
+    ProgressBar progress;
+    private final List<NewEvent> eventList = new ArrayList<>();
+
+    ImageView searchIV;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -60,13 +67,15 @@ ImageView searchIV;
         iV = view.findViewById(R.id.addNewGroup);
         mRecyclerView = view.findViewById(R.id.horizontal_recycler_view);
 
+        progress = view.findViewById(R.id.in_progress);
+
         databaseReference = FirebaseDatabase.getInstance().getReference("groups");
 //      mStorageRef = FirebaseStorage.getInstance().getReference("uploads");
         searchIV = view.findViewById(R.id.searchEvents);
         searchIV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getActivity(),SearchActivity.class));
+                startActivity(new Intent(getActivity(), SearchActivity.class));
             }
         });
 
@@ -74,12 +83,10 @@ ImageView searchIV;
         databaseReference.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-
-
                 NewGroupData newData = snapshot.getValue(NewGroupData.class);
                 mItems.add(newData);
-                initRecycler(mItems);
-                progressBar.setVisibility(View.INVISIBLE);
+                initGroupsRecycler(mItems);
+                progressBar.setVisibility(View.GONE);
             }
 
             @Override
@@ -104,7 +111,7 @@ ImageView searchIV;
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                progressBar.setVisibility(View.INVISIBLE);
+                progressBar.setVisibility(View.GONE);
             }
 
         });
@@ -122,8 +129,6 @@ ImageView searchIV;
         //Here begins the vertical RecyclerView of Events
 
 
-
-
         fab = view.findViewById(R.id.fab_button);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -134,20 +139,65 @@ ImageView searchIV;
             }
         });
 
+        verticalRecView = view.findViewById(R.id.vertical_recycler_view);
+        mDatareference = FirebaseDatabase.getInstance().getReference("events");
+
+        mDatareference.addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+                NewEvent events = snapshot.getValue(NewEvent.class);
+                eventList.add(events);
+                initEventRecycler(eventList);
+                progress.setVisibility(View.GONE);
+            }
+
+            @Override
+            public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+                NewEvent event = snapshot.getValue(NewEvent.class);
+                String key = snapshot.getKey();
+
+            }
+
+            @Override
+            public void onChildRemoved(@NonNull DataSnapshot snapshot) {
+
+                String key = snapshot.getKey();
+            }
+
+            @Override
+            public void onChildMoved(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+                NewEvent event = snapshot.getValue(NewEvent.class);
+                String key = snapshot.getKey();
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                progress.setVisibility(View.INVISIBLE);
+
+            }
+        });
+
 
         return view;
 
     }
 
 
-//Groups recyclerview
-    private void initRecycler(List<NewGroupData> list) {
+    //Groups recyclerview
+    private void initGroupsRecycler(List<NewGroupData> list) {
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.HORIZONTAL, true));
         mAdapter = new GroupsAdapter(getActivity(), list);
         mRecyclerView.setAdapter(mAdapter);
 
     }
 
+    //events recyclerview
+    private void initEventRecycler(List<NewEvent> eList) {
+        verticalRecView.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.VERTICAL, true));
+        eventAdapter = new EventAdapter(getActivity(), eList);
+        verticalRecView.setAdapter(eventAdapter);
+    }
 
 }
 

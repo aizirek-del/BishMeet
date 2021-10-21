@@ -98,7 +98,7 @@
             android:layout_toRightOf="@+id/cards_image_view">
 
             <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/shapeableFoto"
+                android:id="@+id/partcps_foto"
                 android:layout_width="16dp"
                 android:layout_height="16dp"
                 android:src="@drawable/prof5"
@@ -109,7 +109,7 @@
                 android:layout_width="16dp"
                 android:layout_height="16dp"
                 android:layout_marginStart="-4dp"
-                android:layout_toRightOf="@+id/shapeableFoto"
+                android:layout_toRightOf="@+id/participants_foto"
                 android:src="@drawable/prof2"
                 app:shapeAppearanceOverlay="@style/round_images" />
             <com.google.android.material.imageview.ShapeableImageView
@@ -125,17 +125,11 @@
                 android:id="@+id/membersNum"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="55dp"
+                android:layout_marginStart="35dp"
                 android:layout_toRightOf="@+id/sFoto"
                 android:text="158 " />
-            <TextView
 
 
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_toRightOf="@+id/membersNum"
-                android:text="участников" />
         </RelativeLayout>
 
 
@@ -203,12 +197,6 @@
             android:text="Активный отдых"
             />
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/shapeable_buttons"
-            android:onClick="joinGroup"
-            android:layout_margin="16dp"/>
 
 
     </LinearLayout>

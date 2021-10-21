@@ -7,6 +7,8 @@
     android:layout_marginStart="6dp">
 
 
+
+
     <com.google.android.material.imageview.ShapeableImageView
 
         android:layout_width="160dp"

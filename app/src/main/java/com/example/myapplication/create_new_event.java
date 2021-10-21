@@ -1,5 +1,7 @@
 package com.example.myapplication;
 
+import static java.text.DateFormat.getDateInstance;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -32,7 +34,6 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.StorageTask;
@@ -41,9 +42,7 @@ import com.google.firebase.storage.UploadTask;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class create_new_event extends AppCompatActivity {
     AutoCompleteTextView dropDownText;
@@ -53,7 +52,7 @@ public class create_new_event extends AppCompatActivity {
 
     DatabaseReference mDatabase;
     StorageReference mStorage;
-    private Uri imageUri;
+    private Uri uri;
     private StorageTask storageTask;
     private String EVENT_KEY = "events";
     private static final int PICK_IMAGE_REQUEST = 1;
@@ -93,12 +92,38 @@ public class create_new_event extends AppCompatActivity {
         mStorage = FirebaseStorage.getInstance().getReference(EVENT_KEY);
 
         groupsDatabase = FirebaseDatabase.getInstance().getReference("groups");
+        dropDownText = findViewById(R.id.autoComplete);
 
-        groupsDatabase.addValueEventListener(new ValueEventListener() {
+        groupsDatabase.addChildEventListener(new ChildEventListener() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
+            public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
                 NewGroupData newData = snapshot.getValue(NewGroupData.class);
                 items.add(newData.title);
+                initDropDown(items);
+            }
+
+            @Override
+            public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+                NewGroupData newData = snapshot.getValue(NewGroupData.class);
+                items.add(newData.title);
+                initDropDown(items);
+
+            }
+
+            @Override
+            public void onChildRemoved(@NonNull DataSnapshot snapshot) {
+                NewGroupData newData = snapshot.getValue(NewGroupData.class);
+                items.add(newData.title);
+                initDropDown(items);
+
+            }
+
+            @Override
+            public void onChildMoved(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+                NewGroupData newData = snapshot.getValue(NewGroupData.class);
+                items.add(newData.title);
+                initDropDown(items);
+
             }
 
             @Override
@@ -106,15 +131,6 @@ public class create_new_event extends AppCompatActivity {
 
             }
         });
-
-
-        dropDownText = findViewById(R.id.autoComplete);
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.dropdown_item, items);
-        dropDownText.setText(adapter.getItem(0).toString(), false);
-
-        dropDownText.setAdapter(adapter);
-
 
         mdateformat = findViewById(R.id.dateformat);
         Calendar calendar = Calendar.getInstance();
@@ -133,12 +149,20 @@ public class create_new_event extends AppCompatActivity {
                         String sDate = dayOfMonth + "." + month + "." + year;
                         mdateformat.setText(SimpleDateFormat.getDateInstance().format(calendar.getTime()));
                         mdateformat.setText(sDate);
+                 //messageTime.setText(DateFormat.format("dd-MM-yyyy (HH:mm:ss)",model.getMessageTime()));
                     }
                 }, year, month, day);
                 datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
                 datePickerDialog.show();
             }
         });
+
+    }
+
+    private void initDropDown(List<String> items) {
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.dropdown_item, items);
+        dropDownText.setText(adapter.getItem(0).toString(), false);
+        dropDownText.setAdapter(adapter);
 
     }
 
@@ -184,9 +208,9 @@ public class create_new_event extends AppCompatActivity {
     }
 
     private void uploadFile(String key) {
-        if (imageUri != null) {
-            StorageReference fileReference = mStorage.child(System.currentTimeMillis() + "." + getFileExtension(imageUri));
-            storageTask = fileReference.putFile(imageUri)
+        if (uri != null) {
+            StorageReference fileReference = mStorage.child(System.currentTimeMillis() + "." + getFileExtension(uri));
+            storageTask = fileReference.putFile(uri)
                     .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                         @Override
                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
@@ -230,11 +254,10 @@ public class create_new_event extends AppCompatActivity {
 
         if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK
                 && data != null && data.getData() != null) {
-            imageUri = data.getData();
+            uri = data.getData();
             if (resultCode == RESULT_OK) {
                 Log.d("My tag", "Image uri" + data.getData());
                 Event_imgView.setImageURI(data.getData());
-
             }
         }
     }

@@ -33,6 +33,9 @@
         android:theme="@style/Theme.MyApplication"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="com.example.myapplication.Event_detailed"
+            android:exported="true" />
+        <activity
             android:name="com.example.myapplication.SearchActivity"
             android:exported="true" />
         <activity

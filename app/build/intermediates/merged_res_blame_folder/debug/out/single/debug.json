@@ -4,16 +4,24 @@
         "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\ic_add.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_bishmeet_logo.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\bishmeet_logo.png"
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_ftt.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\ftt.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
         "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_profile.xml.flat",
         "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\layout\\fragment_profile.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_check_white.xml.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\ic_baseline_check_white.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_bishmeet_logo.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\bishmeet_logo.png"
     },
     {
         "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.webp.flat",
@@ -26,6 +34,10 @@
     {
         "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_library_add.xml.flat",
         "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\ic_library_add.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_cancel_24.xml.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\ic_baseline_cancel_24.xml"
     },
     {
         "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_prof2.png.flat",
@@ -42,6 +54,10 @@
     {
         "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_time.xml.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\time.xml"
     },
     {
         "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_location.xml.flat",
@@ -72,8 +88,28 @@
         "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\ic_baseline_home_24.xml"
     },
     {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_favorite.xml.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\ic_favorite.xml"
+    },
+    {
         "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_register_page.xml.flat",
         "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\layout\\activity_register_page.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_willgo.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\willgo.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_event_detailed.xml.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\layout\\activity_event_detailed.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\layout_search_result.xml.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\layout\\search_result.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_gdgfoto.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\gdgfoto.png"
     },
     {
         "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.webp.flat",
@@ -88,6 +124,14 @@
         "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
     },
     {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_favorite_24.xml.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\ic_baseline_favorite_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_close_24.xml.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\ic_baseline_close_24.xml"
+    },
+    {
         "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_image.png.flat",
         "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\image.png"
     },
@@ -100,8 +144,16 @@
         "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.webp"
     },
     {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_favorite.xml.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\favorite.xml"
+    },
+    {
         "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_prof4.jpg.flat",
         "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\prof4.jpg"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_dontgo.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\dontgo.png"
     },
     {
         "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_arrow_back.xml.flat",
@@ -110,6 +162,10 @@
     {
         "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_check_circle_outline_24.xml.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\ic_baseline_check_circle_outline_24.xml"
     },
     {
         "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_create.xml.flat",
@@ -122,6 +178,10 @@
     {
         "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_search.xml.flat",
         "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\layout\\activity_search.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_vector.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\ic_vector.png"
     },
     {
         "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_main.xml.flat",
@@ -138,6 +198,10 @@
     {
         "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_location_on_24.xml.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\ic_baseline_location_on_24.xml"
     },
     {
         "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.webp.flat",
@@ -188,12 +252,12 @@
         "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\layout\\list_layout.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_create_24.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\ic_baseline_create_24.xml"
-    },
-    {
         "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_rocket.png.flat",
         "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\rocket.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_create_24.xml.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\ic_baseline_create_24.xml"
     },
     {
         "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_rounded_shape.xml.flat",
@@ -220,6 +284,10 @@
         "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\layout\\activity_home_after_authorization.xml"
     },
     {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_arrow_back_24.xml.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\ic_baseline_arrow_back_24.xml"
+    },
+    {
         "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_create_new_group.xml.flat",
         "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\layout\\activity_create_new_group.xml"
     },
@@ -228,12 +296,12 @@
         "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\shape_file.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.webp"
-    },
-    {
         "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\layout_card_list_layout.xml.flat",
         "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\layout\\card_list_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
         "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_launcher_background.xml.flat",

@@ -28,9 +28,6 @@ public final class FragmentHomeBinding implements ViewBinding {
   public final ImageView addNewGroup;
 
   @NonNull
-  public final RecyclerView cardRecyclerView;
-
-  @NonNull
   public final TextView events;
 
   @NonNull
@@ -38,6 +35,9 @@ public final class FragmentHomeBinding implements ViewBinding {
 
   @NonNull
   public final RecyclerView horizontalRecyclerView;
+
+  @NonNull
+  public final ProgressBar inProgress;
 
   @NonNull
   public final ImageButton location;
@@ -48,20 +48,24 @@ public final class FragmentHomeBinding implements ViewBinding {
   @NonNull
   public final ImageView searchEvents;
 
+  @NonNull
+  public final RecyclerView verticalRecyclerView;
+
   private FragmentHomeBinding(@NonNull RelativeLayout rootView, @NonNull ImageView addNewGroup,
-      @NonNull RecyclerView cardRecyclerView, @NonNull TextView events,
-      @NonNull FloatingActionButton fabButton, @NonNull RecyclerView horizontalRecyclerView,
+      @NonNull TextView events, @NonNull FloatingActionButton fabButton,
+      @NonNull RecyclerView horizontalRecyclerView, @NonNull ProgressBar inProgress,
       @NonNull ImageButton location, @NonNull ProgressBar progressBAr,
-      @NonNull ImageView searchEvents) {
+      @NonNull ImageView searchEvents, @NonNull RecyclerView verticalRecyclerView) {
     this.rootView = rootView;
     this.addNewGroup = addNewGroup;
-    this.cardRecyclerView = cardRecyclerView;
     this.events = events;
     this.fabButton = fabButton;
     this.horizontalRecyclerView = horizontalRecyclerView;
+    this.inProgress = inProgress;
     this.location = location;
     this.progressBAr = progressBAr;
     this.searchEvents = searchEvents;
+    this.verticalRecyclerView = verticalRecyclerView;
   }
 
   @Override
@@ -97,12 +101,6 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.card_recycler_view;
-      RecyclerView cardRecyclerView = ViewBindings.findChildViewById(rootView, id);
-      if (cardRecyclerView == null) {
-        break missingId;
-      }
-
       id = R.id.events;
       TextView events = ViewBindings.findChildViewById(rootView, id);
       if (events == null) {
@@ -118,6 +116,12 @@ public final class FragmentHomeBinding implements ViewBinding {
       id = R.id.horizontal_recycler_view;
       RecyclerView horizontalRecyclerView = ViewBindings.findChildViewById(rootView, id);
       if (horizontalRecyclerView == null) {
+        break missingId;
+      }
+
+      id = R.id.in_progress;
+      ProgressBar inProgress = ViewBindings.findChildViewById(rootView, id);
+      if (inProgress == null) {
         break missingId;
       }
 
@@ -139,8 +143,15 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentHomeBinding((RelativeLayout) rootView, addNewGroup, cardRecyclerView,
-          events, fabButton, horizontalRecyclerView, location, progressBAr, searchEvents);
+      id = R.id.vertical_recycler_view;
+      RecyclerView verticalRecyclerView = ViewBindings.findChildViewById(rootView, id);
+      if (verticalRecyclerView == null) {
+        break missingId;
+      }
+
+      return new FragmentHomeBinding((RelativeLayout) rootView, addNewGroup, events, fabButton,
+          horizontalRecyclerView, inProgress, location, progressBAr, searchEvents,
+          verticalRecyclerView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

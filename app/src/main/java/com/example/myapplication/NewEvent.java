@@ -7,13 +7,10 @@ public class NewEvent {
             eventDescription, eventLocation, Event_date, event_image;
     List<User> users;
 
-    public List<User> getUsers() {
-        return users;
+    public NewEvent() {
     }
 
-    public void setUsers(List<User> users) {
-        this.users = users;
-    }
+
 
     public NewEvent(String event_id, String groups, String eventTitle, String eventDescription,
                     String eventLocation, String event_date, List<User> users, String event_image) {
@@ -25,8 +22,15 @@ public class NewEvent {
         this.Event_date = event_date;
         this.users = users;
         this.event_image = event_image;
-        // this.EventImage = eventImage;
-        // this.userImg = userImg;
+
+    }
+
+    public List<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(List<User> users) {
+        this.users = users;
     }
 
     public String getEvent_id() {
@@ -54,6 +58,7 @@ public class NewEvent {
     }
 
     public String getEventDescription() {
+
         return eventDescription;
     }
 
@@ -77,4 +82,11 @@ public class NewEvent {
         Event_date = event_date;
     }
 
+    public String getEvent_image() {
+        return event_image;
+    }
+
+    public void setEvent_image(String event_image) {
+        this.event_image = event_image;
+    }
 }

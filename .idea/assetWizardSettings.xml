@@ -3,6 +3,11 @@
   <component name="WizardSettings">
     <option name="children">
       <map>
+        <entry key="imageWizard">
+          <value>
+            <PersistentState />
+          </value>
+        </entry>
         <entry key="vectorWizard">
           <value>
             <PersistentState>
@@ -18,7 +23,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/search/baseline_search_24.xml" />
+                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/favorite/baseline_favorite_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -28,8 +33,8 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="color" value="faf9f9" />
-                            <entry key="outputName" value="ic_baseline_search_24" />
+                            <entry key="color" value="0e0d0d" />
+                            <entry key="outputName" value="ic_favorite" />
                             <entry key="sourceFile" value="C:\Users\user\AndroidStudioProjects\MyApplication2" />
                           </map>
                         </option>
