@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/BishMeet1/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.2203125" />
+        <entry key="..\:/BishMeet1/app/src/main/res/drawable/vector.xml" value="0.2203125" />
+        <entry key="..\:/BishMeet1/app/src/main/res/layout/activity_search.xml" value="0.25" />
+        <entry key="..\:/BishMeet1/app/src/main/res/layout/search_result.xml" value="0.18888888888888888" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MyApplication2/app/src/main/res/drawable/corner_radius.xml" value="0.22314814814814815" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MyApplication2/app/src/main/res/drawable/ic_add.xml" value="0.24259259259259258" />
         <entry key="..\:/Users/user/AndroidStudioProjects/MyApplication2/app/src/main/res/drawable/rounded_corn.xml" value="0.22314814814814815" />
