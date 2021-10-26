@@ -1,21 +1,15 @@
 package com.example.myapplication;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.google.firebase.database.ChildEventListener;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
@@ -28,6 +22,7 @@ import java.util.List;
 public class Detailed_group extends AppCompatActivity {
     TextView tvTitle,tvdesc,tvInterest,tvCategory;
     ImageView ivClub;
+    ImageView partic_foto1,particp_foto2,particp_foto3;
     DatabaseReference databaseReference;
     StorageReference mStorageRef;
     ImageButton imgBtn;
@@ -48,6 +43,9 @@ public class Detailed_group extends AppCompatActivity {
         tvdesc = findViewById(R.id.descriptionClub);
         tvInterest = findViewById(R.id.interestOfClub);
         tvCategory=findViewById(R.id.categoryClub);
+        partic_foto1 = findViewById(R.id.partcps_foto);
+        particp_foto2 = findViewById(R.id.participants_foto);
+        particp_foto3 = findViewById(R.id.part_ft);
 
         imgBtn = findViewById(R.id.back_button);
         imgBtn.setOnClickListener(new View.OnClickListener() {
@@ -57,9 +55,9 @@ public class Detailed_group extends AppCompatActivity {
             }
         });
 
-        getIntentMain();
+        get_intent_main();
     }
-    private void getIntentMain(){
+    private void get_intent_main(){
         Intent  in = getIntent();
         if(in!= null){
             tvTitle.setText(in.getStringExtra("title"));
@@ -67,15 +65,12 @@ public class Detailed_group extends AppCompatActivity {
             tvdesc.setText(in.getStringExtra("description"));
             tvInterest.setText(in.getStringExtra("interest"));
             tvCategory.setText(in.getStringExtra("category"));
+
+            Picasso.get().load(Uri.parse(in.getStringExtra("imageUri")) ).into(partic_foto1);
+            Picasso.get().load(Uri.parse(in.getStringExtra("imageUri")) ).into(particp_foto2);
+            Picasso.get().load(Uri.parse(in.getStringExtra("imageUri")) ).into(particp_foto3);
+
             startActivity(in);
         }
-
-
-    }
-
-
-    public void joinGroup(View view) {
-
-
     }
 }

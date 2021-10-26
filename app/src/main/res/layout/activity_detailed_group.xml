@@ -90,7 +90,6 @@
             android:textSize="22sp"/>
 
         <RelativeLayout
-
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/cards_tv_online"
@@ -109,17 +108,18 @@
                 android:layout_width="16dp"
                 android:layout_height="16dp"
                 android:layout_marginStart="-4dp"
-                android:layout_toRightOf="@+id/participants_foto"
+                android:layout_toRightOf="@+id/partcps_foto"
                 android:src="@drawable/prof2"
                 app:shapeAppearanceOverlay="@style/round_images" />
+
             <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/part_ft"
                 android:layout_width="16dp"
                 android:layout_height="16dp"
-                android:src="@drawable/prof4"
-                android:layout_toRightOf="@+id/sFoto"
                 android:layout_marginStart="-4dp"
-                app:shapeAppearanceOverlay="@style/round_images"
-                />
+                android:layout_toRightOf="@+id/sFoto"
+                android:src="@drawable/prof4"
+                app:shapeAppearanceOverlay="@style/round_images" />
 
             <TextView
                 android:id="@+id/membersNum"
@@ -196,8 +196,6 @@
             android:layout_margin="24dp"
             android:text="Активный отдых"
             />
-
-
 
     </LinearLayout>
 

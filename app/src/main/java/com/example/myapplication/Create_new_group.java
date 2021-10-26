@@ -28,14 +28,21 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.StorageTask;
 import com.google.firebase.storage.UploadTask;
 
 import java.io.ByteArrayOutputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Create_new_group extends AppCompatActivity {
 
@@ -90,10 +97,7 @@ public class Create_new_group extends AppCompatActivity {
             public void onClick(View view) {
                 init();
                 Toast.makeText(Create_new_group.this, "Загрузка...", Toast.LENGTH_LONG).show();
-                PackageManager pm = getPackageManager();
-                pm.setComponentEnabledSetting(new ComponentName(Create_new_group.this, Create_new_group.class),
-                        PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP);
-            }
+                 }
 
         });
 
@@ -131,7 +135,12 @@ public class Create_new_group extends AppCompatActivity {
                         public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
                             Log.e("Create_NewGRoup", "Done OnComplete");
                             Toast.makeText(Create_new_group.this, "Добавлена", Toast.LENGTH_SHORT).show();
+                            PackageManager pm = getPackageManager();
+                            pm.setComponentEnabledSetting(new ComponentName(Create_new_group.this, Create_new_group.class),
+                                    PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP);
+
                             finish();
+
                         }
                     })
                     .addOnFailureListener(new OnFailureListener() {
@@ -205,12 +214,34 @@ public class Create_new_group extends AppCompatActivity {
         String description = editDesc.getText().toString().trim();
         String interest = editInterest.getText().toString().trim();
         String category = spinnerCategory.getSelectedItem().toString();
-        NewGroupData groupData = new NewGroupData(id, titleGr, description, interest, category, " ");
+        List<User> users = new ArrayList<>();
 
-        if (!TextUtils.isEmpty(titleGr)&&!TextUtils.isEmpty(description)&&!TextUtils.isEmpty(interest)) {
-            if (id != null) databaseReference.child(id).setValue(groupData);
-            uploadFile(id);
-             } else {
+        String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+        DatabaseReference userDatabase = FirebaseDatabase.getInstance().getReference("User")
+                .child(userId);
+        userDatabase.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                User user = snapshot.getValue(User.class);
+                users.add(user);
+                createDb(new NewGroupData(id,users, titleGr, description, interest, category, " "));
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+
+    }
+
+    private void createDb(NewGroupData group) {
+        if (!TextUtils.isEmpty(group.title)&&!TextUtils.isEmpty(group.decription)&&!TextUtils.isEmpty(group.interest)) {
+            if (group.id != null) databaseReference.child(group.id).setValue(group);
+            uploadFile(group.id);
+        } else {
             Toast.makeText(this, "Введите название", Toast.LENGTH_SHORT).show();
         }
 

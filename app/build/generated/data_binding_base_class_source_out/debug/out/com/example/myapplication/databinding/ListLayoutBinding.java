@@ -21,14 +21,18 @@ public final class ListLayoutBinding implements ViewBinding {
   private final CardView rootView;
 
   @NonNull
+  public final CardView cardViewGroup;
+
+  @NonNull
   public final ShapeableImageView ivOfClubList;
 
   @NonNull
   public final TextView txtView;
 
-  private ListLayoutBinding(@NonNull CardView rootView, @NonNull ShapeableImageView ivOfClubList,
-      @NonNull TextView txtView) {
+  private ListLayoutBinding(@NonNull CardView rootView, @NonNull CardView cardViewGroup,
+      @NonNull ShapeableImageView ivOfClubList, @NonNull TextView txtView) {
     this.rootView = rootView;
+    this.cardViewGroup = cardViewGroup;
     this.ivOfClubList = ivOfClubList;
     this.txtView = txtView;
   }
@@ -60,6 +64,8 @@ public final class ListLayoutBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      CardView cardViewGroup = (CardView) rootView;
+
       id = R.id.ivOfClubList;
       ShapeableImageView ivOfClubList = ViewBindings.findChildViewById(rootView, id);
       if (ivOfClubList == null) {
@@ -72,7 +78,7 @@ public final class ListLayoutBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ListLayoutBinding((CardView) rootView, ivOfClubList, txtView);
+      return new ListLayoutBinding((CardView) rootView, cardViewGroup, ivOfClubList, txtView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

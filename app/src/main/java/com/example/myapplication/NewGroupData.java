@@ -2,8 +2,11 @@ package com.example.myapplication;
 
 import android.graphics.Bitmap;
 
+import java.util.List;
+
 public class NewGroupData {
     String id;
+    List<User> users;
     String title;
     String decription;
     String interest;
@@ -13,9 +16,11 @@ public class NewGroupData {
     public NewGroupData() {
 
     }
-    public NewGroupData(String id, String title, String decription , String interest, String category, String imageUri) {
+    public NewGroupData(String id, List<User> users, String title, String decription ,
+                        String interest, String category, String imageUri) {
 
         this.id = id;
+        this.users = users;
         this.title = title;
         this.decription = decription;
         this.interest = interest;
@@ -27,6 +32,15 @@ public class NewGroupData {
 
     public String getId() {
         return id;
+    }
+    public List<User> getUsers() {
+
+        return users;
+    }
+
+    public void setUsers(List<User> users) {
+
+        this.users = users;
     }
 
 

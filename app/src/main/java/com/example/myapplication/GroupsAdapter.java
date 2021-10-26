@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -75,7 +76,6 @@ public class GroupsAdapter extends RecyclerView.Adapter<GroupsAdapter.MyViewHold
      });
 
 
-
   }
     @Override
     public int getItemCount() {
@@ -86,6 +86,7 @@ public class GroupsAdapter extends RecyclerView.Adapter<GroupsAdapter.MyViewHold
     class MyViewHolder extends RecyclerView.ViewHolder {
         ImageView imgView;
         TextView txtView;
+        CardView cardV;
 
         public MyViewHolder(@NonNull View itemView) {
 

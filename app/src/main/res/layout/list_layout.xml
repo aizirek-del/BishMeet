@@ -3,10 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="191dp"
-    android:layout_marginStart="6dp">
-
-
+    android:id="@+id/cardView_group"
+    android:layout_height="191dp">
 
 
     <com.google.android.material.imageview.ShapeableImageView
@@ -14,9 +12,9 @@
         android:layout_width="160dp"
         android:layout_height="110dp"
         android:id="@+id/ivOfClubList"
-        android:scaleType="fitCenter"
+        android:scaleType="centerCrop"
         android:layout_gravity="center_vertical"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="12dp"
         app:shapeAppearanceOverlay="@style/Shapeable_images"
         android:src="@drawable/bikeclub"/>
 
@@ -27,6 +25,6 @@
         android:text="Bike club"
         android:textColor="@color/black"
         android:layout_marginTop="160dp"
-        android:layout_marginStart="16dp"/>
+        android:layout_marginStart="18dp"/>
 
 </androidx.cardview.widget.CardView>

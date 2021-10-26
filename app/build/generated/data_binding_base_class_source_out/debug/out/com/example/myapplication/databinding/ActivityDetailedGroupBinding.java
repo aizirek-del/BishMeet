@@ -47,6 +47,9 @@ public final class ActivityDetailedGroupBinding implements ViewBinding {
   public final TextView membersNum;
 
   @NonNull
+  public final ShapeableImageView partFt;
+
+  @NonNull
   public final ShapeableImageView partcpsFoto;
 
   @NonNull
@@ -60,8 +63,8 @@ public final class ActivityDetailedGroupBinding implements ViewBinding {
       @NonNull TextView categoryClub, @NonNull TextView descriptionClub,
       @NonNull ImageView detCardImageView, @NonNull ImageView imgofClub,
       @NonNull TextView interestOfClub, @NonNull TextView membersNum,
-      @NonNull ShapeableImageView partcpsFoto, @NonNull ShapeableImageView sFoto,
-      @NonNull TextView titleOfclub) {
+      @NonNull ShapeableImageView partFt, @NonNull ShapeableImageView partcpsFoto,
+      @NonNull ShapeableImageView sFoto, @NonNull TextView titleOfclub) {
     this.rootView = rootView;
     this.backButton = backButton;
     this.cardsTextTitle = cardsTextTitle;
@@ -71,6 +74,7 @@ public final class ActivityDetailedGroupBinding implements ViewBinding {
     this.imgofClub = imgofClub;
     this.interestOfClub = interestOfClub;
     this.membersNum = membersNum;
+    this.partFt = partFt;
     this.partcpsFoto = partcpsFoto;
     this.sFoto = sFoto;
     this.titleOfclub = titleOfclub;
@@ -151,6 +155,12 @@ public final class ActivityDetailedGroupBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.part_ft;
+      ShapeableImageView partFt = ViewBindings.findChildViewById(rootView, id);
+      if (partFt == null) {
+        break missingId;
+      }
+
       id = R.id.partcps_foto;
       ShapeableImageView partcpsFoto = ViewBindings.findChildViewById(rootView, id);
       if (partcpsFoto == null) {
@@ -171,7 +181,7 @@ public final class ActivityDetailedGroupBinding implements ViewBinding {
 
       return new ActivityDetailedGroupBinding((ScrollView) rootView, backButton, cardsTextTitle,
           categoryClub, descriptionClub, detCardImageView, imgofClub, interestOfClub, membersNum,
-          partcpsFoto, sFoto, titleOfclub);
+          partFt, partcpsFoto, sFoto, titleOfclub);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

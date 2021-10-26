@@ -50,6 +50,7 @@
             android:layout_height="120dp"
             android:layout_gravity="center_horizontal"
             android:background="#4568E4"
+            android:scaleType="centerCrop"
             android:layout_marginTop="15dp"
             android:src="@drawable/ic_baseline_person_24"
             app:layout_constraintEnd_toEndOf="parent"

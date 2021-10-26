@@ -1170,6 +1170,7 @@ color foreground_material_dark
 color foreground_material_light
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color ic_launcher_background
 color light_gray
 color material_blue_grey_800
 color material_blue_grey_900
@@ -1864,7 +1865,6 @@ drawable ic_clock_black_24dp
 drawable ic_create
 drawable ic_favorite
 drawable ic_keyboard_black_24dp
-drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_library_add
 drawable ic_location
@@ -1873,6 +1873,7 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_vector
+drawable ic_white_check
 drawable image
 drawable logo
 drawable material_cursor_drawable
@@ -2048,6 +2049,7 @@ id cache_measures
 id calendar
 id cancel_action
 id cancel_button
+id cardView_group
 id card_event
 id cards_image_view
 id cards_text_title
@@ -2111,6 +2113,7 @@ id design_menu_item_action_area_stub
 id design_menu_item_text
 id design_navigation_view
 id det_card_image_view
+id det_locat
 id dialog_button
 id dimensions
 id direct
@@ -2310,15 +2313,18 @@ id on
 id outline
 id outward
 id overshoot
+id p_foto
 id packed
 id page_1
 id page_2
 id page_3
+id par_foto
 id parallax
 id parent
 id parentPanel
 id parentRelative
 id parent_matrix
+id part_ft
 id partcps_foto
 id participants_foto
 id password_toggle
@@ -2338,6 +2344,7 @@ id prog
 id progressBAr
 id progress_circular
 id progress_horizontal
+id psfoto
 id radio
 id ratio
 id rectangles
@@ -2687,6 +2694,7 @@ layout text_view_with_theme_line_height
 layout text_view_without_line_height
 menu bottom_navigation_menu
 mipmap ic_launcher
+mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
 string abc_action_bar_home_description

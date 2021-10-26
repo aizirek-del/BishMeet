@@ -40,7 +40,7 @@ public class HomeFragment extends Fragment {
     // vertical list of events
     RecyclerView verticalRecView;
     EventAdapter eventAdapter;
-    DatabaseReference mDatareference;
+    DatabaseReference       mDatareference;
     ProgressBar progress;
     private final List<NewEvent> eventList = new ArrayList<>();
 

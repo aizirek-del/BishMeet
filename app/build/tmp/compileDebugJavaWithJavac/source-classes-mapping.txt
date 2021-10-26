@@ -25,8 +25,6 @@ com/example/myapplication/databinding/ActivityCreateNewGroupBinding.java
  com.example.myapplication.databinding.ActivityCreateNewGroupBinding
 com/example/myapplication/ItemClickListener.java
  com.example.myapplication.ItemClickListener
-com/example/myapplication/Entry_page.java
- com.example.myapplication.Entry_page
 com/example/myapplication/Create_new_group.java
  com.example.myapplication.Create_new_group
  com.example.myapplication.Create_new_group$1
@@ -38,6 +36,11 @@ com/example/myapplication/Create_new_group.java
  com.example.myapplication.Create_new_group$6$1
  com.example.myapplication.Create_new_group$7
  com.example.myapplication.Create_new_group$8
+ com.example.myapplication.Create_new_group$9
+com/example/myapplication/Search.java
+ com.example.myapplication.Search
+ com.example.myapplication.Search$1
+ com.example.myapplication.Search$1$1
 com/example/myapplication/databinding/ActivityEventDetailedBinding.java
  com.example.myapplication.databinding.ActivityEventDetailedBinding
 com/example/myapplication/placeholder/PlaceholderContent.java
@@ -58,8 +61,8 @@ com/example/myapplication/databinding/ActivityResetPasswordBinding.java
  com.example.myapplication.databinding.ActivityResetPasswordBinding
 com/example/myapplication/databinding/ActivityRegisterPageBinding.java
  com.example.myapplication.databinding.ActivityRegisterPageBinding
-com/example/myapplication/NewEvent.java
- com.example.myapplication.NewEvent
+com/example/myapplication/SearchActivity.java
+ com.example.myapplication.SearchActivity
 com/example/myapplication/MainActivity.java
  com.example.myapplication.MainActivity
  com.example.myapplication.MainActivity$1
@@ -91,6 +94,14 @@ com/example/myapplication/databinding/ActivityMainBinding.java
  com.example.myapplication.databinding.ActivityMainBinding
 com/example/myapplication/CalendarFragment.java
  com.example.myapplication.CalendarFragment
+com/example/myapplication/Entry_page.java
+ com.example.myapplication.Entry_page
+com/example/myapplication/databinding/ActivityLoginBinding.java
+ com.example.myapplication.databinding.ActivityLoginBinding
+com/example/myapplication/databinding/ActivityEntryPageBinding.java
+ com.example.myapplication.databinding.ActivityEntryPageBinding
+com/example/myapplication/NewEvent.java
+ com.example.myapplication.NewEvent
 com/example/myapplication/create_new_event.java
  com.example.myapplication.create_new_event
  com.example.myapplication.create_new_event$1
@@ -98,19 +109,11 @@ com/example/myapplication/create_new_event.java
  com.example.myapplication.create_new_event$3
  com.example.myapplication.create_new_event$3$1
  com.example.myapplication.create_new_event$4
+ com.example.myapplication.create_new_event$4$1
  com.example.myapplication.create_new_event$5
  com.example.myapplication.create_new_event$6
- com.example.myapplication.create_new_event$6$1
-com/example/myapplication/databinding/ActivityLoginBinding.java
- com.example.myapplication.databinding.ActivityLoginBinding
-com/example/myapplication/databinding/ActivityEntryPageBinding.java
- com.example.myapplication.databinding.ActivityEntryPageBinding
-com/example/myapplication/SearchActivity.java
- com.example.myapplication.SearchActivity
-com/example/myapplication/Search.java
- com.example.myapplication.Search
- com.example.myapplication.Search$1
- com.example.myapplication.Search$1$1
+ com.example.myapplication.create_new_event$7
+ com.example.myapplication.create_new_event$7$1
 com/example/myapplication/HomeFragment.java
  com.example.myapplication.HomeFragment
  com.example.myapplication.HomeFragment$1
@@ -132,6 +135,8 @@ com/example/myapplication/Event_detailed.java
  com.example.myapplication.Event_detailed
  com.example.myapplication.Event_detailed$1
  com.example.myapplication.Event_detailed$2
- com.example.myapplication.Event_detailed$2$1
- com.example.myapplication.Event_detailed$2$2
+ com.example.myapplication.Event_detailed$3
+ com.example.myapplication.Event_detailed$3$1
+ com.example.myapplication.Event_detailed$3$2
+ com.example.myapplication.Event_detailed$4
  com.example.myapplication.Event_detailed$Select

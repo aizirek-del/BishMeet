@@ -39,16 +39,13 @@ import java.util.List;
     @Override
     public void onBindViewHolder(@NonNull EventViewHolder holder, int position) {
         NewEvent event = eventDataList.get(position);
-        holder.cards_tv.setText(event.groups);
+//        holder.cards_tv.setText(event.groupData.title);
         holder.tv_descrip.setText(event.eventDescription);
 //       holder.tv_participants.setText(event.users.size() +" участников");
 
         Picasso.get()
                 .load(event.event_image)
                 .into(holder.event_imgView);
-//        Picasso.get().
-//                load(Uri.parse(event.)).
-//                into(holder.partic_img );
 
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,12 +53,12 @@ import java.util.List;
 
                 Intent in = new Intent(context,Event_detailed.class);
 
-                in.putExtra("eventTitle",event.eventTitle);
-                 in.putExtra("event_image",event.event_image);
-                in.putExtra("eventDescription",event.eventDescription);
-                in.putExtra("event_date",event.Event_date);
-                in.putExtra("eventLocation",event.eventLocation);
-
+//                in.putExtra("eventTitle",event.eventTitle);
+//                 in.putExtra("event_image",event.event_image);
+//                in.putExtra("eventDescription",event.eventDescription);
+//                in.putExtra("event_date",event.Event_date);
+//                in.putExtra("eventLocation",event.eventLocation);
+                in.putExtra("event_id",event.Event_id);
                 context.startActivity(in);
             }
         });
@@ -69,6 +66,7 @@ import java.util.List;
 
     @Override
     public int getItemCount() {
+
         return eventDataList.size();
     }
 }
@@ -78,8 +76,6 @@ class EventViewHolder extends RecyclerView.ViewHolder{
     ImageView partic_img;
     TextView cards_tv,tv_descrip,tv_participants;
     CardView cardView;
-
-
 
     public EventViewHolder(@NonNull View itemView){
         super(itemView);

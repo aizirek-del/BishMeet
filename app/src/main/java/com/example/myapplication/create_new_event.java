@@ -29,11 +29,14 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.StorageTask;
@@ -42,7 +45,9 @@ import com.google.firebase.storage.UploadTask;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class create_new_event extends AppCompatActivity {
     AutoCompleteTextView dropDownText;
@@ -149,7 +154,7 @@ public class create_new_event extends AppCompatActivity {
                         String sDate = dayOfMonth + "." + month + "." + year;
                         mdateformat.setText(SimpleDateFormat.getDateInstance().format(calendar.getTime()));
                         mdateformat.setText(sDate);
-                 //messageTime.setText(DateFormat.format("dd-MM-yyyy (HH:mm:ss)",model.getMessageTime()));
+                        //messageTime.setText(DateFormat.format("dd-MM-yyyy (HH:mm:ss)",model.getMessageTime()));
                     }
                 }, year, month, day);
                 datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
@@ -168,24 +173,45 @@ public class create_new_event extends AppCompatActivity {
 
     public void createEvent(View view) {
         String event_id = mDatabase.push().getKey();
-        String group_id = dropDownText.getAdapter().toString().trim();
+        String group_id = dropDownText.getText().toString().trim();
         String event_title = titlevent.getText().toString().trim();
         String event_decription = Evdescription.getText().toString().trim();
         String event_location = eventLocation.getText().toString().trim();
         String event_date = mdateformat.getText().toString().trim();
-        List<User> users = new ArrayList<>();
+        Map<String, User> users = new HashMap<>();
 
+        DatabaseReference mDatareference = FirebaseDatabase.getInstance().getReference("groups").child(group_id);
 
-        if (!TextUtils.isEmpty(event_title)) {
+        mDatareference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                NewGroupData groupData = snapshot.getValue(NewGroupData.class);
+                String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+                DatabaseReference userDatabase = FirebaseDatabase.getInstance().getReference("User")
+                        .child(userId);
+                userDatabase.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        User user = snapshot.getValue(User.class);
+                        users.put(userId, user);
+                        createDb(new NewEvent(event_id, groupData, event_title,
+                                event_decription, event_location, event_date, users, " "));
 
-            NewEvent event = new NewEvent(event_id, group_id, event_title, event_decription,
-                    event_location, event_date, users, " ");
-            mDatabase.child(event_id).setValue(event);
-            Toast.makeText(this, "Добавлена", Toast.LENGTH_SHORT).show();
-            uploadFile(event_id);
-        } else {
-            Toast.makeText(this, "Введите название", Toast.LENGTH_SHORT).show();
-        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
         Toast.makeText(create_new_event.this, "Загрузка...", Toast.LENGTH_LONG).show();
         PackageManager pm = getPackageManager();
@@ -193,6 +219,15 @@ public class create_new_event extends AppCompatActivity {
                 PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP);
     }
 
+    public void createDb(NewEvent event) {
+
+        if (!TextUtils.isEmpty(event.eventTitle)) {
+            mDatabase.child(event.Event_id).setValue(event);
+            uploadFile(event.Event_id);
+        } else {
+            Toast.makeText(this, "Введите название", Toast.LENGTH_SHORT).show();
+        }
+    }
 
     public void selectFoto(View view) {
         Intent intent = new Intent();
