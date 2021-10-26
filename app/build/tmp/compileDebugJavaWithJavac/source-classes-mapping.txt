@@ -25,19 +25,17 @@ com/example/myapplication/databinding/ActivityCreateNewGroupBinding.java
  com.example.myapplication.databinding.ActivityCreateNewGroupBinding
 com/example/myapplication/ItemClickListener.java
  com.example.myapplication.ItemClickListener
-com/example/myapplication/Entry_page.java
- com.example.myapplication.Entry_page
-com/example/myapplication/Create_new_group.java
- com.example.myapplication.Create_new_group
- com.example.myapplication.Create_new_group$1
- com.example.myapplication.Create_new_group$2
- com.example.myapplication.Create_new_group$3
- com.example.myapplication.Create_new_group$4
- com.example.myapplication.Create_new_group$5
- com.example.myapplication.Create_new_group$6
- com.example.myapplication.Create_new_group$6$1
- com.example.myapplication.Create_new_group$7
- com.example.myapplication.Create_new_group$8
+com/example/myapplication/HomeFragment.java
+ com.example.myapplication.HomeFragment
+ com.example.myapplication.HomeFragment$1
+ com.example.myapplication.HomeFragment$2
+ com.example.myapplication.HomeFragment$3
+ com.example.myapplication.HomeFragment$4
+ com.example.myapplication.HomeFragment$5
+com/example/myapplication/EventAdapter.java
+ com.example.myapplication.EventAdapter
+ com.example.myapplication.EventAdapter$1
+ com.example.myapplication.EventViewHolder
 com/example/myapplication/databinding/ActivityEventDetailedBinding.java
  com.example.myapplication.databinding.ActivityEventDetailedBinding
 com/example/myapplication/placeholder/PlaceholderContent.java
@@ -110,24 +108,28 @@ com/example/myapplication/SearchActivity.java
 com/example/myapplication/Search.java
  com.example.myapplication.Search
  com.example.myapplication.Search$1
- com.example.myapplication.Search$1$1
-com/example/myapplication/HomeFragment.java
- com.example.myapplication.HomeFragment
- com.example.myapplication.HomeFragment$1
- com.example.myapplication.HomeFragment$2
- com.example.myapplication.HomeFragment$3
- com.example.myapplication.HomeFragment$4
- com.example.myapplication.HomeFragment$5
+ com.example.myapplication.Search$2
+ com.example.myapplication.Search$3
+ com.example.myapplication.Search$3$1
+com/example/myapplication/Entry_page.java
+ com.example.myapplication.Entry_page
+com/example/myapplication/Create_new_group.java
+ com.example.myapplication.Create_new_group
+ com.example.myapplication.Create_new_group$1
+ com.example.myapplication.Create_new_group$2
+ com.example.myapplication.Create_new_group$3
+ com.example.myapplication.Create_new_group$4
+ com.example.myapplication.Create_new_group$5
+ com.example.myapplication.Create_new_group$6
+ com.example.myapplication.Create_new_group$6$1
+ com.example.myapplication.Create_new_group$7
+ com.example.myapplication.Create_new_group$8
 com/example/myapplication/ProfileFragment.java
  com.example.myapplication.ProfileFragment
  com.example.myapplication.ProfileFragment$1
  com.example.myapplication.ProfileFragment$2
  com.example.myapplication.ProfileFragment$3
  com.example.myapplication.ProfileFragment$4
-com/example/myapplication/EventAdapter.java
- com.example.myapplication.EventAdapter
- com.example.myapplication.EventAdapter$1
- com.example.myapplication.EventViewHolder
 com/example/myapplication/Event_detailed.java
  com.example.myapplication.Event_detailed
  com.example.myapplication.Event_detailed$1

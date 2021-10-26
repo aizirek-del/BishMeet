@@ -1,14 +1,14 @@
-#Thu Oct 21 20:48:02 ALMT 2021
+#Fri Oct 22 17:52:03 ALMT 2021
 path.4=7/classes.dex
 path.3=5/classes.dex
 path.2=2/classes.dex
 path.1=0/classes.dex
 path.0=classes.dex
-base.4=C\:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\7\\classes.dex
-base.3=C\:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\5\\classes.dex
-base.2=C\:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\2\\classes.dex
-base.1=C\:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
-base.0=C\:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.4=E\:\\BishMeet1\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\7\\classes.dex
+base.3=E\:\\BishMeet1\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\5\\classes.dex
+base.2=E\:\\BishMeet1\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\2\\classes.dex
+base.1=E\:\\BishMeet1\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.0=E\:\\BishMeet1\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
