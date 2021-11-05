@@ -20,7 +20,7 @@ import java.util.List;
 
  public class EventAdapter extends RecyclerView.Adapter<EventViewHolder> {
     Context context;
-    private List<NewEvent> eventDataList ;
+    public List<NewEvent> eventDataList ;
 
     public EventAdapter(FragmentActivity activity, List<NewEvent> eventDataList) {
         this.context = activity;
@@ -41,7 +41,8 @@ import java.util.List;
         NewEvent event = eventDataList.get(position);
 //        holder.cards_tv.setText(event.groupData.title);
         holder.tv_descrip.setText(event.eventDescription);
-//       holder.tv_participants.setText(event.users.size() +" участников");
+
+       holder.tv_participants.setText(event.users.size() +" участников");
 
         Picasso.get()
                 .load(event.event_image)
@@ -58,7 +59,7 @@ import java.util.List;
 //                in.putExtra("eventDescription",event.eventDescription);
 //                in.putExtra("event_date",event.Event_date);
 //                in.putExtra("eventLocation",event.eventLocation);
-                in.putExtra("event_id",event.Event_id);
+                in.putExtra("event_id", event.Event_id);
                 context.startActivity(in);
             }
         });

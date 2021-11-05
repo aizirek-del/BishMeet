@@ -9,6 +9,7 @@ public class NewEvent {
     Map<String, User> users;
     NewGroupData groupData;
 
+
     public NewGroupData getGroupData() {
 
         return groupData;
@@ -20,6 +21,7 @@ public class NewEvent {
     }
 
     public NewEvent() {
+
     }
 
 

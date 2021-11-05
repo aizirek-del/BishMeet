@@ -4,6 +4,7 @@ package com.example.myapplication.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -23,6 +24,9 @@ import java.lang.String;
 public final class FragmentHomeBinding implements ViewBinding {
   @NonNull
   private final RelativeLayout rootView;
+
+  @NonNull
+  public final Button WillGoBtn;
 
   @NonNull
   public final ImageView addNewGroup;
@@ -51,12 +55,17 @@ public final class FragmentHomeBinding implements ViewBinding {
   @NonNull
   public final RecyclerView verticalRecyclerView;
 
-  private FragmentHomeBinding(@NonNull RelativeLayout rootView, @NonNull ImageView addNewGroup,
-      @NonNull TextView events, @NonNull FloatingActionButton fabButton,
-      @NonNull RecyclerView horizontalRecyclerView, @NonNull ProgressBar inProgress,
-      @NonNull ImageButton location, @NonNull ProgressBar progressBAr,
-      @NonNull ImageView searchEvents, @NonNull RecyclerView verticalRecyclerView) {
+  @NonNull
+  public final Button wholeList;
+
+  private FragmentHomeBinding(@NonNull RelativeLayout rootView, @NonNull Button WillGoBtn,
+      @NonNull ImageView addNewGroup, @NonNull TextView events,
+      @NonNull FloatingActionButton fabButton, @NonNull RecyclerView horizontalRecyclerView,
+      @NonNull ProgressBar inProgress, @NonNull ImageButton location,
+      @NonNull ProgressBar progressBAr, @NonNull ImageView searchEvents,
+      @NonNull RecyclerView verticalRecyclerView, @NonNull Button wholeList) {
     this.rootView = rootView;
+    this.WillGoBtn = WillGoBtn;
     this.addNewGroup = addNewGroup;
     this.events = events;
     this.fabButton = fabButton;
@@ -66,6 +75,7 @@ public final class FragmentHomeBinding implements ViewBinding {
     this.progressBAr = progressBAr;
     this.searchEvents = searchEvents;
     this.verticalRecyclerView = verticalRecyclerView;
+    this.wholeList = wholeList;
   }
 
   @Override
@@ -95,6 +105,12 @@ public final class FragmentHomeBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.Will_goBtn;
+      Button WillGoBtn = ViewBindings.findChildViewById(rootView, id);
+      if (WillGoBtn == null) {
+        break missingId;
+      }
+
       id = R.id.addNewGroup;
       ImageView addNewGroup = ViewBindings.findChildViewById(rootView, id);
       if (addNewGroup == null) {
@@ -149,9 +165,15 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentHomeBinding((RelativeLayout) rootView, addNewGroup, events, fabButton,
-          horizontalRecyclerView, inProgress, location, progressBAr, searchEvents,
-          verticalRecyclerView);
+      id = R.id.wholeList;
+      Button wholeList = ViewBindings.findChildViewById(rootView, id);
+      if (wholeList == null) {
+        break missingId;
+      }
+
+      return new FragmentHomeBinding((RelativeLayout) rootView, WillGoBtn, addNewGroup, events,
+          fabButton, horizontalRecyclerView, inProgress, location, progressBAr, searchEvents,
+          verticalRecyclerView, wholeList);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

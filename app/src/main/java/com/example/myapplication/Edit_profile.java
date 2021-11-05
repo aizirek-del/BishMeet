@@ -118,7 +118,7 @@ public class Edit_profile extends AppCompatActivity {
                                 public void onSuccess(Uri uri) {
 
                                     String imageUrl = uri.toString();
-                                    mDatabase.child(key).child("imageUri").setValue(imageUrl);
+                                    mDatabase.child(key).child("imgUri").setValue(imageUrl);
 
 
 

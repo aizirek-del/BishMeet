@@ -9,22 +9,29 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 public class HomeFragment extends Fragment {
@@ -40,9 +47,10 @@ public class HomeFragment extends Fragment {
     // vertical list of events
     RecyclerView verticalRecView;
     EventAdapter eventAdapter;
-    DatabaseReference       mDatareference;
+    DatabaseReference mDatareference;
     ProgressBar progress;
     private final List<NewEvent> eventList = new ArrayList<>();
+    Button goButton, wholeList;
 
     ImageView searchIV;
 
@@ -178,6 +186,21 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        goButton = view.findViewById(R.id.Will_goBtn);
+
+        goButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                updateListByMe();
+            }
+        });
+        wholeList = view.findViewById(R.id.wholeList);
+        wholeList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                upDateList();
+            }
+        });
 
         return view;
 
@@ -199,6 +222,93 @@ public class HomeFragment extends Fragment {
         verticalRecView.setAdapter(eventAdapter);
     }
 
+    private void updateListByMe() {
+        progress.setVisibility(View.VISIBLE);
+        final FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+        DatabaseReference dbReference = FirebaseDatabase.getInstance().getReference().child("events");
+        eventList.clear();
+        dbReference.addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+                NewEvent events = snapshot.getValue(NewEvent.class);
+                if (events.users.containsKey(firebaseUser.getUid())) {
+                    eventList.add(events);
+                }
+                eventAdapter.eventDataList = eventList;
+                eventAdapter.notifyDataSetChanged();
+                progress.setVisibility(View.GONE);
+            }
+
+            @Override
+            public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+                NewEvent event = snapshot.getValue(NewEvent.class);
+                String key = snapshot.getKey();
+
+            }
+
+            @Override
+            public void onChildRemoved(@NonNull DataSnapshot snapshot) {
+
+                String key = snapshot.getKey();
+            }
+
+            @Override
+            public void onChildMoved(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+                NewEvent event = snapshot.getValue(NewEvent.class);
+                String key = snapshot.getKey();
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                progress.setVisibility(View.INVISIBLE);
+
+            }
+        });
+    }
+
+    private void upDateList() {
+        final FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+        DatabaseReference dbReference = FirebaseDatabase.getInstance().getReference().child("events");
+        eventList.clear();
+        dbReference.addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+                NewEvent events = snapshot.getValue(NewEvent.class);
+                eventList.add(events);
+
+                eventAdapter.eventDataList = eventList;
+                eventAdapter.notifyDataSetChanged();
+                progress.setVisibility(View.GONE);
+            }
+
+            @Override
+            public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+                NewEvent event = snapshot.getValue(NewEvent.class);
+                String key = snapshot.getKey();
+
+            }
+
+            @Override
+            public void onChildRemoved(@NonNull DataSnapshot snapshot) {
+
+                String key = snapshot.getKey();
+            }
+
+            @Override
+            public void onChildMoved(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+                NewEvent event = snapshot.getValue(NewEvent.class);
+                String key = snapshot.getKey();
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                progress.setVisibility(View.INVISIBLE);
+
+            }
+        });
+    }
 }
 
 

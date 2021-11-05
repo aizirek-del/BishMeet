@@ -93,7 +93,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="55dp"
                 android:layout_toRightOf="@+id/sFoto"
-                android:text="158 " />
+                android:text="5 " />
 
             <TextView
 

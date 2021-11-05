@@ -66,11 +66,16 @@ public class Detailed_group extends AppCompatActivity {
             tvInterest.setText(in.getStringExtra("interest"));
             tvCategory.setText(in.getStringExtra("category"));
 
-            Picasso.get().load(Uri.parse(in.getStringExtra("imageUri")) ).into(partic_foto1);
-            Picasso.get().load(Uri.parse(in.getStringExtra("imageUri")) ).into(particp_foto2);
-            Picasso.get().load(Uri.parse(in.getStringExtra("imageUri")) ).into(particp_foto3);
 
+            Picasso.get().load(Uri.parse(in.getStringExtra("imgUri0")) ).into(partic_foto1);
+            if(!in.getStringExtra("imgUri1").isEmpty()){
+                Picasso.get().load(Uri.parse(in.getStringExtra("imgUri1")) ).into(particp_foto2);
+
+            }else if(!in.getStringExtra("imgUri2").isEmpty()) {
+                Picasso.get().load(Uri.parse(in.getStringExtra("imgUri2"))).into(particp_foto3);
+            }
             startActivity(in);
+
         }
     }
 }

@@ -41,11 +41,13 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class Event_detailed extends AppCompatActivity {
     Button btn_choose;
     ImageView group_img, event_img;
-    TextView ev_titleOf_gr, ev_title, time_event, ev_location, ev_description;
+    ImageView partic_foto1, partic_foto2, partic_foto3;
+    TextView ev_titleOf_gr, ev_title, time_event, ev_location, ev_description, members_num;
     ImageButton b_btn;
 
     DatabaseReference mDatareference;
@@ -63,6 +65,10 @@ public class Event_detailed extends AppCompatActivity {
         time_event = findViewById(R.id.time_of_event_detailed);
         ev_location = findViewById(R.id.location_of_event_detailed);
         ev_description = findViewById(R.id.description_event_detailed);
+        members_num = findViewById(R.id.membersNum);
+        partic_foto1 = findViewById(R.id.par_foto);
+        partic_foto2 = findViewById(R.id.p_foto);
+        partic_foto3 = findViewById(R.id.psfoto);
 
         mDatareference = FirebaseDatabase
                 .getInstance().getReference("events")
@@ -132,7 +138,7 @@ public class Event_detailed extends AppCompatActivity {
                             public void onClick(DialogInterface dialog, int item) {
                                 if (item == 0) {
                                     btn_choose.setText(items[0].toString());
-                                    btn_choose.setBackgroundColor(getResources().getColor(R.color.browser_actions_bg_grey));
+                                    btn_choose.setBackgroundColor(getResources().getColor(R.color.text_color_grey));
                                 } else if (item == 1) {
                                     btn_choose.setText(items[1].toString());
                                     btn_choose.setBackgroundColor(getResources().getColor(R.color.blue));
@@ -175,15 +181,26 @@ public class Event_detailed extends AppCompatActivity {
     }
 
     private void initView(NewEvent event) {
-        {
-            ev_title.setText(event.eventTitle);
-            Picasso.get().load(Uri.parse(event.event_image)).into(event_img);//Здесь внимательнее
-            ev_description.setText(event.eventDescription);
-            time_event.setText(event.Event_date);
-            ev_location.setText(event.eventLocation);
-            ev_titleOf_gr.setText(event.groupData.title);
-            Picasso.get().load(Uri.parse(event.groupData.imageUri)).into(group_img);
+
+        ev_title.setText(event.eventTitle);
+        Picasso.get().load(Uri.parse(event.event_image)).into(event_img);//Здесь внимательнее
+        ev_description.setText(event.eventDescription);
+        time_event.setText(event.Event_date);
+        ev_location.setText(event.eventLocation);
+        ev_titleOf_gr.setText(event.groupData.title);
+
+
+        Picasso.get().load(Uri.parse(event.groupData.imageUri)).into(group_img);
+        List<User> list = event.users.entrySet().stream().map(o -> o.getValue()).collect(Collectors.toList());
+        if (list.size() != 0) {
+            Picasso.get().load(Uri.parse(list.get(0).imgUri)).into(partic_foto1);
         }
+        if (list.size() == 2) {
+            Picasso.get().load(Uri.parse(list.get(1).imgUri)).into(partic_foto1);
+        } else if (list.size() == 3) {
+            Picasso.get().load(Uri.parse(list.get(2).imgUri)).into(partic_foto1);
+        }
+
     }
 
     private class Select {

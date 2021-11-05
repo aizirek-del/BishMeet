@@ -3,17 +3,17 @@ package com.example.myapplication;
 public class User {
 
 
-    public  String id,name, surname,city, imageUri;
+    public  String id,name, surname,city, imgUri;
 
     public User() {
     }
 
-    public String getImageUri() {
-        return imageUri;
+    public String getImgUri() {
+         return imgUri;
     }
 
-    public void setImageUri(String imageUri) {
-        this.imageUri = imageUri;
+    public void setImgUri(String imgUri) {
+        this.imgUri = imgUri;
     }
 
     public User(String id, String name, String surname, String city, String imageUri) {
@@ -21,7 +21,7 @@ public class User {
         this.name = name;
         this.surname = surname;
         this.city = city;
-        this.imageUri = imageUri;
+        this.imgUri = imageUri;
 
     }
 

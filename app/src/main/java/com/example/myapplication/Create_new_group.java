@@ -124,7 +124,7 @@ public class Create_new_group extends AppCompatActivity {
                                 @Override
                                 public void onSuccess(Uri uri) {
                                     String imageUrl = uri.toString();
-                                    databaseReference.child(key).child("imageUri").setValue(imageUrl);
+                                    databaseReference.child(key).child("imgUri").setValue(imageUrl);
                                 }
                             });
 
@@ -183,7 +183,7 @@ public class Create_new_group extends AppCompatActivity {
 
         }
     }
-//Picasso.get().load(imageUri).into(mImage);
+//Picasso.get().load(imgUri).into(mImage);
 
     public void uploadImage() {
         Bitmap bitmap = ((BitmapDrawable) mImage.getDrawable()).getBitmap();
