@@ -5,8 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -29,9 +27,6 @@ public final class FragmentHomeBinding implements ViewBinding {
   public final Button WillGoBtn;
 
   @NonNull
-  public final ImageView addNewGroup;
-
-  @NonNull
   public final TextView events;
 
   @NonNull
@@ -44,13 +39,7 @@ public final class FragmentHomeBinding implements ViewBinding {
   public final ProgressBar inProgress;
 
   @NonNull
-  public final ImageButton location;
-
-  @NonNull
   public final ProgressBar progressBAr;
-
-  @NonNull
-  public final ImageView searchEvents;
 
   @NonNull
   public final RecyclerView verticalRecyclerView;
@@ -59,21 +48,17 @@ public final class FragmentHomeBinding implements ViewBinding {
   public final Button wholeList;
 
   private FragmentHomeBinding(@NonNull RelativeLayout rootView, @NonNull Button WillGoBtn,
-      @NonNull ImageView addNewGroup, @NonNull TextView events,
-      @NonNull FloatingActionButton fabButton, @NonNull RecyclerView horizontalRecyclerView,
-      @NonNull ProgressBar inProgress, @NonNull ImageButton location,
-      @NonNull ProgressBar progressBAr, @NonNull ImageView searchEvents,
-      @NonNull RecyclerView verticalRecyclerView, @NonNull Button wholeList) {
+      @NonNull TextView events, @NonNull FloatingActionButton fabButton,
+      @NonNull RecyclerView horizontalRecyclerView, @NonNull ProgressBar inProgress,
+      @NonNull ProgressBar progressBAr, @NonNull RecyclerView verticalRecyclerView,
+      @NonNull Button wholeList) {
     this.rootView = rootView;
     this.WillGoBtn = WillGoBtn;
-    this.addNewGroup = addNewGroup;
     this.events = events;
     this.fabButton = fabButton;
     this.horizontalRecyclerView = horizontalRecyclerView;
     this.inProgress = inProgress;
-    this.location = location;
     this.progressBAr = progressBAr;
-    this.searchEvents = searchEvents;
     this.verticalRecyclerView = verticalRecyclerView;
     this.wholeList = wholeList;
   }
@@ -111,12 +96,6 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.addNewGroup;
-      ImageView addNewGroup = ViewBindings.findChildViewById(rootView, id);
-      if (addNewGroup == null) {
-        break missingId;
-      }
-
       id = R.id.events;
       TextView events = ViewBindings.findChildViewById(rootView, id);
       if (events == null) {
@@ -141,21 +120,9 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.location;
-      ImageButton location = ViewBindings.findChildViewById(rootView, id);
-      if (location == null) {
-        break missingId;
-      }
-
       id = R.id.progressBAr;
       ProgressBar progressBAr = ViewBindings.findChildViewById(rootView, id);
       if (progressBAr == null) {
-        break missingId;
-      }
-
-      id = R.id.searchEvents;
-      ImageView searchEvents = ViewBindings.findChildViewById(rootView, id);
-      if (searchEvents == null) {
         break missingId;
       }
 
@@ -171,9 +138,8 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentHomeBinding((RelativeLayout) rootView, WillGoBtn, addNewGroup, events,
-          fabButton, horizontalRecyclerView, inProgress, location, progressBAr, searchEvents,
-          verticalRecyclerView, wholeList);
+      return new FragmentHomeBinding((RelativeLayout) rootView, WillGoBtn, events, fabButton,
+          horizontalRecyclerView, inProgress, progressBAr, verticalRecyclerView, wholeList);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

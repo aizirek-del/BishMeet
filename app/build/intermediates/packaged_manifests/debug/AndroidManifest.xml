@@ -34,9 +34,6 @@
             android:name="com.example.myapplication.Event_detailed"
             android:exported="true" />
         <activity
-            android:name="com.example.myapplication.SearchActivity"
-            android:exported="true" />
-        <activity
             android:name="com.example.myapplication.ResetPassword"
             android:exported="true" />
         <activity

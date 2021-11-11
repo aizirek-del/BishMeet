@@ -20,9 +20,6 @@
             android:name=".Event_detailed"
             android:exported="true" />
         <activity
-            android:name=".SearchActivity"
-            android:exported="true" />
-        <activity
             android:name=".ResetPassword"
             android:exported="true" />
         <activity

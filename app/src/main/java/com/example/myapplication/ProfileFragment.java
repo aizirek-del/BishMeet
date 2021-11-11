@@ -77,7 +77,7 @@ public class ProfileFragment extends Fragment {
         MyProfileSurname = view.findViewById(R.id.myprofile_Surname);
         MyProfileCity = view.findViewById(R.id.myProfile_city);
         myProfile_Foto = view.findViewById(R.id.MyProfile_foto);
-
+        progressBar = view.findViewById(R.id.prog);
 
         imgEditProfile = view.findViewById(R.id.editProfilePage);
         imgEditProfile.setOnClickListener(new View.OnClickListener() {
