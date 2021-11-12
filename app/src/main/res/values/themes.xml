@@ -14,7 +14,7 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="HomeFragment" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="HomeFragment" parent="ThemeOverlay.AppCompat.ActionBar">
         <item name="colorPrimary">#4568E4</item>
         <item name="colorPrimaryVariant">@color/black</item>
         <item name="colorOnPrimary">@color/white</item>

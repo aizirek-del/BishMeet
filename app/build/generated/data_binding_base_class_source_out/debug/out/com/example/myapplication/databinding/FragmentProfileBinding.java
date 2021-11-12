@@ -14,7 +14,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
-import androidx.viewbinding.ViewBindings;
 import com.example.myapplication.R;
 import com.google.android.material.imageview.ShapeableImageView;
 import java.lang.NullPointerException;
@@ -111,73 +110,73 @@ public final class FragmentProfileBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.MyProfile_foto;
-      ShapeableImageView MyProfileFoto = ViewBindings.findChildViewById(rootView, id);
+      ShapeableImageView MyProfileFoto = rootView.findViewById(id);
       if (MyProfileFoto == null) {
         break missingId;
       }
 
       id = R.id.backArrow;
-      ImageButton backArrow = ViewBindings.findChildViewById(rootView, id);
+      ImageButton backArrow = rootView.findViewById(id);
       if (backArrow == null) {
         break missingId;
       }
 
       id = R.id.editProfilePage;
-      ImageView editProfilePage = ViewBindings.findChildViewById(rootView, id);
+      ImageView editProfilePage = rootView.findViewById(id);
       if (editProfilePage == null) {
         break missingId;
       }
 
       id = R.id.events;
-      TextView events = ViewBindings.findChildViewById(rootView, id);
+      TextView events = rootView.findViewById(id);
       if (events == null) {
         break missingId;
       }
 
       id = R.id.in_prog;
-      ProgressBar inProg = ViewBindings.findChildViewById(rootView, id);
+      ProgressBar inProg = rootView.findViewById(id);
       if (inProg == null) {
         break missingId;
       }
 
       id = R.id.myProfile_city;
-      TextView myProfileCity = ViewBindings.findChildViewById(rootView, id);
+      TextView myProfileCity = rootView.findViewById(id);
       if (myProfileCity == null) {
         break missingId;
       }
 
       id = R.id.myprofile_name;
-      TextView myprofileName = ViewBindings.findChildViewById(rootView, id);
+      TextView myprofileName = rootView.findViewById(id);
       if (myprofileName == null) {
         break missingId;
       }
 
       id = R.id.myprofile_Surname;
-      TextView myprofileSurname = ViewBindings.findChildViewById(rootView, id);
+      TextView myprofileSurname = rootView.findViewById(id);
       if (myprofileSurname == null) {
         break missingId;
       }
 
       id = R.id.profile_hor_recycler_view;
-      RecyclerView profileHorRecyclerView = ViewBindings.findChildViewById(rootView, id);
+      RecyclerView profileHorRecyclerView = rootView.findViewById(id);
       if (profileHorRecyclerView == null) {
         break missingId;
       }
 
       id = R.id.profiles_layout;
-      LinearLayout profilesLayout = ViewBindings.findChildViewById(rootView, id);
+      LinearLayout profilesLayout = rootView.findViewById(id);
       if (profilesLayout == null) {
         break missingId;
       }
 
       id = R.id.profiles_vert_recycler_view;
-      RecyclerView profilesVertRecyclerView = ViewBindings.findChildViewById(rootView, id);
+      RecyclerView profilesVertRecyclerView = rootView.findViewById(id);
       if (profilesVertRecyclerView == null) {
         break missingId;
       }
 
       id = R.id.prog;
-      ProgressBar prog = ViewBindings.findChildViewById(rootView, id);
+      ProgressBar prog = rootView.findViewById(id);
       if (prog == null) {
         break missingId;
       }

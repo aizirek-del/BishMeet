@@ -12,7 +12,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
-import androidx.viewbinding.ViewBindings;
 import com.example.myapplication.R;
 import com.google.android.material.imageview.ShapeableImageView;
 import java.lang.NullPointerException;
@@ -118,85 +117,85 @@ public final class ActivityEventDetailedBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.b_btn;
-      ImageButton bBtn = ViewBindings.findChildViewById(rootView, id);
+      ImageButton bBtn = rootView.findViewById(id);
       if (bBtn == null) {
         break missingId;
       }
 
       id = R.id.description_event_detailed;
-      TextView descriptionEventDetailed = ViewBindings.findChildViewById(rootView, id);
+      TextView descriptionEventDetailed = rootView.findViewById(id);
       if (descriptionEventDetailed == null) {
         break missingId;
       }
 
       id = R.id.det_locat;
-      ImageView detLocat = ViewBindings.findChildViewById(rootView, id);
+      ImageView detLocat = rootView.findViewById(id);
       if (detLocat == null) {
         break missingId;
       }
 
       id = R.id.foto_event_detailed;
-      ImageView fotoEventDetailed = ViewBindings.findChildViewById(rootView, id);
+      ImageView fotoEventDetailed = rootView.findViewById(id);
       if (fotoEventDetailed == null) {
         break missingId;
       }
 
       id = R.id.gr_image_in_evDetailed;
-      ImageView grImageInEvDetailed = ViewBindings.findChildViewById(rootView, id);
+      ImageView grImageInEvDetailed = rootView.findViewById(id);
       if (grImageInEvDetailed == null) {
         break missingId;
       }
 
       id = R.id.gr_title_in_evDetailed;
-      TextView grTitleInEvDetailed = ViewBindings.findChildViewById(rootView, id);
+      TextView grTitleInEvDetailed = rootView.findViewById(id);
       if (grTitleInEvDetailed == null) {
         break missingId;
       }
 
       id = R.id.join_to_event;
-      Button joinToEvent = ViewBindings.findChildViewById(rootView, id);
+      Button joinToEvent = rootView.findViewById(id);
       if (joinToEvent == null) {
         break missingId;
       }
 
       id = R.id.location_of_event_detailed;
-      TextView locationOfEventDetailed = ViewBindings.findChildViewById(rootView, id);
+      TextView locationOfEventDetailed = rootView.findViewById(id);
       if (locationOfEventDetailed == null) {
         break missingId;
       }
 
       id = R.id.membersNum;
-      TextView membersNum = ViewBindings.findChildViewById(rootView, id);
+      TextView membersNum = rootView.findViewById(id);
       if (membersNum == null) {
         break missingId;
       }
 
       id = R.id.p_foto;
-      ShapeableImageView pFoto = ViewBindings.findChildViewById(rootView, id);
+      ShapeableImageView pFoto = rootView.findViewById(id);
       if (pFoto == null) {
         break missingId;
       }
 
       id = R.id.par_foto;
-      ShapeableImageView parFoto = ViewBindings.findChildViewById(rootView, id);
+      ShapeableImageView parFoto = rootView.findViewById(id);
       if (parFoto == null) {
         break missingId;
       }
 
       id = R.id.psfoto;
-      ShapeableImageView psfoto = ViewBindings.findChildViewById(rootView, id);
+      ShapeableImageView psfoto = rootView.findViewById(id);
       if (psfoto == null) {
         break missingId;
       }
 
       id = R.id.time_of_event_detailed;
-      TextView timeOfEventDetailed = ViewBindings.findChildViewById(rootView, id);
+      TextView timeOfEventDetailed = rootView.findViewById(id);
       if (timeOfEventDetailed == null) {
         break missingId;
       }
 
       id = R.id.title_of_event_detailed;
-      TextView titleOfEventDetailed = ViewBindings.findChildViewById(rootView, id);
+      TextView titleOfEventDetailed = rootView.findViewById(id);
       if (titleOfEventDetailed == null) {
         break missingId;
       }

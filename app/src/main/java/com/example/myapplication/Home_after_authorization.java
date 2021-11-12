@@ -5,6 +5,7 @@ import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.FragmentManager;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -17,14 +18,16 @@ public class Home_after_authorization extends AppCompatActivity implements Navig
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_after_authorization);
-
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        toolbar.setTitle("Вish Meet");
+        toolbar.inflateMenu(R.menu.main_menu);
 
         mFragm=getSupportFragmentManager();
 
         navView = findViewById(R.id.bottom_navigation);
         navView.setOnItemSelectedListener(this);
         navView.setSelectedItemId(R.id.page_1);
-
     }
 
     @Override

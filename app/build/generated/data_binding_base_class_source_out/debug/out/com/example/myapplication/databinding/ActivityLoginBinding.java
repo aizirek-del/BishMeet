@@ -11,7 +11,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
-import androidx.viewbinding.ViewBindings;
 import com.example.myapplication.R;
 import com.google.android.material.textfield.TextInputEditText;
 import java.lang.NullPointerException;
@@ -76,31 +75,31 @@ public final class ActivityLoginBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.Logins_btnEnter;
-      Button LoginsBtnEnter = ViewBindings.findChildViewById(rootView, id);
+      Button LoginsBtnEnter = rootView.findViewById(id);
       if (LoginsBtnEnter == null) {
         break missingId;
       }
 
       id = R.id.LoginsPassword;
-      TextInputEditText LoginsPassword = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText LoginsPassword = rootView.findViewById(id);
       if (LoginsPassword == null) {
         break missingId;
       }
 
       id = R.id.edit_Email_Login;
-      TextInputEditText editEmailLogin = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText editEmailLogin = rootView.findViewById(id);
       if (editEmailLogin == null) {
         break missingId;
       }
 
       id = R.id.prevoius_btn;
-      ImageButton prevoiusBtn = ViewBindings.findChildViewById(rootView, id);
+      ImageButton prevoiusBtn = rootView.findViewById(id);
       if (prevoiusBtn == null) {
         break missingId;
       }
 
       id = R.id.registerUser;
-      TextView registerUser = ViewBindings.findChildViewById(rootView, id);
+      TextView registerUser = rootView.findViewById(id);
       if (registerUser == null) {
         break missingId;
       }

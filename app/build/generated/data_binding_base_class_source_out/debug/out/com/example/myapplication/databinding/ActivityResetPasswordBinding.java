@@ -9,7 +9,6 @@ import android.widget.ScrollView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
-import androidx.viewbinding.ViewBindings;
 import com.example.myapplication.R;
 import com.google.android.material.textfield.TextInputEditText;
 import java.lang.NullPointerException;
@@ -61,13 +60,13 @@ public final class ActivityResetPasswordBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.resetBack_btn;
-      ImageButton resetBackBtn = ViewBindings.findChildViewById(rootView, id);
+      ImageButton resetBackBtn = rootView.findViewById(id);
       if (resetBackBtn == null) {
         break missingId;
       }
 
       id = R.id.resetEmail;
-      TextInputEditText resetEmail = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText resetEmail = rootView.findViewById(id);
       if (resetEmail == null) {
         break missingId;
       }

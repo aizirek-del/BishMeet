@@ -10,7 +10,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
-import androidx.viewbinding.ViewBindings;
 import com.example.myapplication.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -66,19 +65,19 @@ public final class ActivityEntryPageBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.continueAsGuest;
-      TextView continueAsGuest = ViewBindings.findChildViewById(rootView, id);
+      TextView continueAsGuest = rootView.findViewById(id);
       if (continueAsGuest == null) {
         break missingId;
       }
 
       id = R.id.loginButton;
-      Button loginButton = ViewBindings.findChildViewById(rootView, id);
+      Button loginButton = rootView.findViewById(id);
       if (loginButton == null) {
         break missingId;
       }
 
       id = R.id.registerButton;
-      Button registerButton = ViewBindings.findChildViewById(rootView, id);
+      Button registerButton = rootView.findViewById(id);
       if (registerButton == null) {
         break missingId;
       }

@@ -9,7 +9,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
-import androidx.viewbinding.ViewBindings;
 import com.example.myapplication.R;
 import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.imageview.ShapeableImageView;
@@ -91,43 +90,43 @@ public final class CardListLayoutBinding implements ViewBinding {
       MaterialCardView cardEvent = (MaterialCardView) rootView;
 
       id = R.id.cards_text_title;
-      TextView cardsTextTitle = ViewBindings.findChildViewById(rootView, id);
+      TextView cardsTextTitle = rootView.findViewById(id);
       if (cardsTextTitle == null) {
         break missingId;
       }
 
       id = R.id.cards_tv;
-      TextView cardsTv = ViewBindings.findChildViewById(rootView, id);
+      TextView cardsTv = rootView.findViewById(id);
       if (cardsTv == null) {
         break missingId;
       }
 
       id = R.id.cards_tv_online;
-      TextView cardsTvOnline = ViewBindings.findChildViewById(rootView, id);
+      TextView cardsTvOnline = rootView.findViewById(id);
       if (cardsTvOnline == null) {
         break missingId;
       }
 
       id = R.id.events_image_view;
-      ImageView eventsImageView = ViewBindings.findChildViewById(rootView, id);
+      ImageView eventsImageView = rootView.findViewById(id);
       if (eventsImageView == null) {
         break missingId;
       }
 
       id = R.id.membersNum;
-      TextView membersNum = ViewBindings.findChildViewById(rootView, id);
+      TextView membersNum = rootView.findViewById(id);
       if (membersNum == null) {
         break missingId;
       }
 
       id = R.id.participants_foto;
-      ShapeableImageView participantsFoto = ViewBindings.findChildViewById(rootView, id);
+      ShapeableImageView participantsFoto = rootView.findViewById(id);
       if (participantsFoto == null) {
         break missingId;
       }
 
       id = R.id.sFoto;
-      ShapeableImageView sFoto = ViewBindings.findChildViewById(rootView, id);
+      ShapeableImageView sFoto = rootView.findViewById(id);
       if (sFoto == null) {
         break missingId;
       }

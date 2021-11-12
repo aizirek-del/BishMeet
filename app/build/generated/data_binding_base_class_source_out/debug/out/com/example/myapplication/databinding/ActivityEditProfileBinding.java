@@ -10,7 +10,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
-import androidx.viewbinding.ViewBindings;
 import com.example.myapplication.R;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.imageview.ShapeableImageView;
@@ -106,67 +105,67 @@ public final class ActivityEditProfileBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.appBarLayout;
-      AppBarLayout appBarLayout = ViewBindings.findChildViewById(rootView, id);
+      AppBarLayout appBarLayout = rootView.findViewById(id);
       if (appBarLayout == null) {
         break missingId;
       }
 
       id = R.id.avatar_foto;
-      ShapeableImageView avatarFoto = ViewBindings.findChildViewById(rootView, id);
+      ShapeableImageView avatarFoto = rootView.findViewById(id);
       if (avatarFoto == null) {
         break missingId;
       }
 
       id = R.id.changephoto;
-      Button changephoto = ViewBindings.findChildViewById(rootView, id);
+      Button changephoto = rootView.findViewById(id);
       if (changephoto == null) {
         break missingId;
       }
 
       id = R.id.editBackBtn;
-      ImageButton editBackBtn = ViewBindings.findChildViewById(rootView, id);
+      ImageButton editBackBtn = rootView.findViewById(id);
       if (editBackBtn == null) {
         break missingId;
       }
 
       id = R.id.edit_city;
-      TextInputEditText editCity = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText editCity = rootView.findViewById(id);
       if (editCity == null) {
         break missingId;
       }
 
       id = R.id.editName;
-      TextInputEditText editName = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText editName = rootView.findViewById(id);
       if (editName == null) {
         break missingId;
       }
 
       id = R.id.editProfButton;
-      Button editProfButton = ViewBindings.findChildViewById(rootView, id);
+      Button editProfButton = rootView.findViewById(id);
       if (editProfButton == null) {
         break missingId;
       }
 
       id = R.id.edit_surname;
-      TextInputEditText editSurname = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText editSurname = rootView.findViewById(id);
       if (editSurname == null) {
         break missingId;
       }
 
       id = R.id.textInputLayout;
-      TextInputLayout textInputLayout = ViewBindings.findChildViewById(rootView, id);
+      TextInputLayout textInputLayout = rootView.findViewById(id);
       if (textInputLayout == null) {
         break missingId;
       }
 
       id = R.id.textInputLayout2;
-      TextInputLayout textInputLayout2 = ViewBindings.findChildViewById(rootView, id);
+      TextInputLayout textInputLayout2 = rootView.findViewById(id);
       if (textInputLayout2 == null) {
         break missingId;
       }
 
       id = R.id.textInputLayout3;
-      TextInputLayout textInputLayout3 = ViewBindings.findChildViewById(rootView, id);
+      TextInputLayout textInputLayout3 = rootView.findViewById(id);
       if (textInputLayout3 == null) {
         break missingId;
       }

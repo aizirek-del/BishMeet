@@ -7,8 +7,8 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.Toolbar;
 import androidx.viewbinding.ViewBinding;
-import androidx.viewbinding.ViewBindings;
 import com.example.myapplication.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import java.lang.NullPointerException;
@@ -25,11 +25,16 @@ public final class ActivityHomeAfterAuthorizationBinding implements ViewBinding 
   @NonNull
   public final LinearLayout contnr;
 
+  @NonNull
+  public final Toolbar toolbar;
+
   private ActivityHomeAfterAuthorizationBinding(@NonNull LinearLayout rootView,
-      @NonNull BottomNavigationView bottomNavigation, @NonNull LinearLayout contnr) {
+      @NonNull BottomNavigationView bottomNavigation, @NonNull LinearLayout contnr,
+      @NonNull Toolbar toolbar) {
     this.rootView = rootView;
     this.bottomNavigation = bottomNavigation;
     this.contnr = contnr;
+    this.toolbar = toolbar;
   }
 
   @Override
@@ -60,19 +65,25 @@ public final class ActivityHomeAfterAuthorizationBinding implements ViewBinding 
     int id;
     missingId: {
       id = R.id.bottom_navigation;
-      BottomNavigationView bottomNavigation = ViewBindings.findChildViewById(rootView, id);
+      BottomNavigationView bottomNavigation = rootView.findViewById(id);
       if (bottomNavigation == null) {
         break missingId;
       }
 
       id = R.id.contnr;
-      LinearLayout contnr = ViewBindings.findChildViewById(rootView, id);
+      LinearLayout contnr = rootView.findViewById(id);
       if (contnr == null) {
         break missingId;
       }
 
+      id = R.id.toolbar;
+      Toolbar toolbar = rootView.findViewById(id);
+      if (toolbar == null) {
+        break missingId;
+      }
+
       return new ActivityHomeAfterAuthorizationBinding((LinearLayout) rootView, bottomNavigation,
-          contnr);
+          contnr, toolbar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

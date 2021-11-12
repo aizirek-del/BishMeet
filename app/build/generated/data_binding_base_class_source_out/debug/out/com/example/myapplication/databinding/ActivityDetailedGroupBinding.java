@@ -11,7 +11,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
-import androidx.viewbinding.ViewBindings;
 import com.example.myapplication.R;
 import com.google.android.material.imageview.ShapeableImageView;
 import java.lang.NullPointerException;
@@ -108,73 +107,73 @@ public final class ActivityDetailedGroupBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.back_button;
-      ImageButton backButton = ViewBindings.findChildViewById(rootView, id);
+      ImageButton backButton = rootView.findViewById(id);
       if (backButton == null) {
         break missingId;
       }
 
       id = R.id.cards_text_title;
-      TextView cardsTextTitle = ViewBindings.findChildViewById(rootView, id);
+      TextView cardsTextTitle = rootView.findViewById(id);
       if (cardsTextTitle == null) {
         break missingId;
       }
 
       id = R.id.categoryClub;
-      TextView categoryClub = ViewBindings.findChildViewById(rootView, id);
+      TextView categoryClub = rootView.findViewById(id);
       if (categoryClub == null) {
         break missingId;
       }
 
       id = R.id.descriptionClub;
-      TextView descriptionClub = ViewBindings.findChildViewById(rootView, id);
+      TextView descriptionClub = rootView.findViewById(id);
       if (descriptionClub == null) {
         break missingId;
       }
 
       id = R.id.det_card_image_view;
-      ImageView detCardImageView = ViewBindings.findChildViewById(rootView, id);
+      ImageView detCardImageView = rootView.findViewById(id);
       if (detCardImageView == null) {
         break missingId;
       }
 
       id = R.id.imgofClub;
-      ImageView imgofClub = ViewBindings.findChildViewById(rootView, id);
+      ImageView imgofClub = rootView.findViewById(id);
       if (imgofClub == null) {
         break missingId;
       }
 
       id = R.id.interestOfClub;
-      TextView interestOfClub = ViewBindings.findChildViewById(rootView, id);
+      TextView interestOfClub = rootView.findViewById(id);
       if (interestOfClub == null) {
         break missingId;
       }
 
       id = R.id.membersNum;
-      TextView membersNum = ViewBindings.findChildViewById(rootView, id);
+      TextView membersNum = rootView.findViewById(id);
       if (membersNum == null) {
         break missingId;
       }
 
       id = R.id.part_ft;
-      ShapeableImageView partFt = ViewBindings.findChildViewById(rootView, id);
+      ShapeableImageView partFt = rootView.findViewById(id);
       if (partFt == null) {
         break missingId;
       }
 
       id = R.id.partcps_foto;
-      ShapeableImageView partcpsFoto = ViewBindings.findChildViewById(rootView, id);
+      ShapeableImageView partcpsFoto = rootView.findViewById(id);
       if (partcpsFoto == null) {
         break missingId;
       }
 
       id = R.id.sFoto;
-      ShapeableImageView sFoto = ViewBindings.findChildViewById(rootView, id);
+      ShapeableImageView sFoto = rootView.findViewById(id);
       if (sFoto == null) {
         break missingId;
       }
 
       id = R.id.titleOfclub;
-      TextView titleOfclub = ViewBindings.findChildViewById(rootView, id);
+      TextView titleOfclub = rootView.findViewById(id);
       if (titleOfclub == null) {
         break missingId;
       }

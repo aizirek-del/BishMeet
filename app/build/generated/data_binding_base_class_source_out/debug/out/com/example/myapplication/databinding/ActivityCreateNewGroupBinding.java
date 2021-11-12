@@ -12,7 +12,6 @@ import android.widget.Spinner;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
-import androidx.viewbinding.ViewBindings;
 import com.example.myapplication.R;
 import com.google.android.material.textfield.TextInputEditText;
 import java.lang.NullPointerException;
@@ -90,49 +89,49 @@ public final class ActivityCreateNewGroupBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.addImg;
-      ImageView addImg = ViewBindings.findChildViewById(rootView, id);
+      ImageView addImg = rootView.findViewById(id);
       if (addImg == null) {
         break missingId;
       }
 
       id = R.id.createbtn;
-      Button createbtn = ViewBindings.findChildViewById(rootView, id);
+      Button createbtn = rootView.findViewById(id);
       if (createbtn == null) {
         break missingId;
       }
 
       id = R.id.decriptn;
-      TextInputEditText decriptn = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText decriptn = rootView.findViewById(id);
       if (decriptn == null) {
         break missingId;
       }
 
       id = R.id.goBack;
-      ImageButton goBack = ViewBindings.findChildViewById(rootView, id);
+      ImageButton goBack = rootView.findViewById(id);
       if (goBack == null) {
         break missingId;
       }
 
       id = R.id.interest;
-      TextInputEditText interest = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText interest = rootView.findViewById(id);
       if (interest == null) {
         break missingId;
       }
 
       id = R.id.pickFoto;
-      Button pickFoto = ViewBindings.findChildViewById(rootView, id);
+      Button pickFoto = rootView.findViewById(id);
       if (pickFoto == null) {
         break missingId;
       }
 
       id = R.id.spinner_menu;
-      Spinner spinnerMenu = ViewBindings.findChildViewById(rootView, id);
+      Spinner spinnerMenu = rootView.findViewById(id);
       if (spinnerMenu == null) {
         break missingId;
       }
 
       id = R.id.titleEdT;
-      TextInputEditText titleEdT = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText titleEdT = rootView.findViewById(id);
       if (titleEdT == null) {
         break missingId;
       }

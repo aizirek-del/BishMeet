@@ -10,7 +10,6 @@ import android.widget.ScrollView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
-import androidx.viewbinding.ViewBindings;
 import com.example.myapplication.R;
 import com.google.android.material.textfield.TextInputEditText;
 import java.lang.NullPointerException;
@@ -76,31 +75,31 @@ public final class ActivityRegisterPageBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.InputPassword;
-      TextInputEditText InputPassword = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText InputPassword = rootView.findViewById(id);
       if (InputPassword == null) {
         break missingId;
       }
 
       id = R.id.back_btn;
-      ImageButton backBtn = ViewBindings.findChildViewById(rootView, id);
+      ImageButton backBtn = rootView.findViewById(id);
       if (backBtn == null) {
         break missingId;
       }
 
       id = R.id.edit_Email;
-      TextInputEditText editEmail = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText editEmail = rootView.findViewById(id);
       if (editEmail == null) {
         break missingId;
       }
 
       id = R.id.nextToPage;
-      Button nextToPage = ViewBindings.findChildViewById(rootView, id);
+      Button nextToPage = rootView.findViewById(id);
       if (nextToPage == null) {
         break missingId;
       }
 
       id = R.id.textIn;
-      TextInputEditText textIn = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText textIn = rootView.findViewById(id);
       if (textIn == null) {
         break missingId;
       }

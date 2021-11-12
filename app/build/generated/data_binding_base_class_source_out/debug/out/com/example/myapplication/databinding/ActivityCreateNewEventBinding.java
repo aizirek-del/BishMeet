@@ -12,7 +12,6 @@ import android.widget.ScrollView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
-import androidx.viewbinding.ViewBindings;
 import com.example.myapplication.R;
 import com.google.android.material.textfield.TextInputEditText;
 import java.lang.NullPointerException;
@@ -100,61 +99,61 @@ public final class ActivityCreateNewEventBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.addEventImg;
-      ImageView addEventImg = ViewBindings.findChildViewById(rootView, id);
+      ImageView addEventImg = rootView.findViewById(id);
       if (addEventImg == null) {
         break missingId;
       }
 
       id = R.id.autoComplete;
-      AutoCompleteTextView autoComplete = ViewBindings.findChildViewById(rootView, id);
+      AutoCompleteTextView autoComplete = rootView.findViewById(id);
       if (autoComplete == null) {
         break missingId;
       }
 
       id = R.id.dateformat;
-      TextInputEditText dateformat = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText dateformat = rootView.findViewById(id);
       if (dateformat == null) {
         break missingId;
       }
 
       id = R.id.eventDescription;
-      TextInputEditText eventDescription = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText eventDescription = rootView.findViewById(id);
       if (eventDescription == null) {
         break missingId;
       }
 
       id = R.id.event_location;
-      TextInputEditText eventLocation = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText eventLocation = rootView.findViewById(id);
       if (eventLocation == null) {
         break missingId;
       }
 
       id = R.id.eventTitle;
-      TextInputEditText eventTitle = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText eventTitle = rootView.findViewById(id);
       if (eventTitle == null) {
         break missingId;
       }
 
       id = R.id.gobck;
-      ImageButton gobck = ViewBindings.findChildViewById(rootView, id);
+      ImageButton gobck = rootView.findViewById(id);
       if (gobck == null) {
         break missingId;
       }
 
       id = R.id.hour_minute;
-      TextInputEditText hourMinute = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText hourMinute = rootView.findViewById(id);
       if (hourMinute == null) {
         break missingId;
       }
 
       id = R.id.initbtn;
-      Button initbtn = ViewBindings.findChildViewById(rootView, id);
+      Button initbtn = rootView.findViewById(id);
       if (initbtn == null) {
         break missingId;
       }
 
       id = R.id.selectFoto;
-      Button selectFoto = ViewBindings.findChildViewById(rootView, id);
+      Button selectFoto = rootView.findViewById(id);
       if (selectFoto == null) {
         break missingId;
       }

@@ -4,14 +4,11 @@ package com.example.myapplication.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.ScrollView;
-import android.widget.SearchView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.recyclerview.widget.RecyclerView;
+import androidx.appcompat.widget.Toolbar;
 import androidx.viewbinding.ViewBinding;
-import androidx.viewbinding.ViewBindings;
 import com.example.myapplication.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -22,25 +19,11 @@ public final class ActivitySearchBinding implements ViewBinding {
   private final ScrollView rootView;
 
   @NonNull
-  public final ImageView calendar;
+  public final Toolbar toolbarSearch;
 
-  @NonNull
-  public final RecyclerView recyclerEvents;
-
-  @NonNull
-  public final RecyclerView recyclerGroups;
-
-  @NonNull
-  public final SearchView searchView;
-
-  private ActivitySearchBinding(@NonNull ScrollView rootView, @NonNull ImageView calendar,
-      @NonNull RecyclerView recyclerEvents, @NonNull RecyclerView recyclerGroups,
-      @NonNull SearchView searchView) {
+  private ActivitySearchBinding(@NonNull ScrollView rootView, @NonNull Toolbar toolbarSearch) {
     this.rootView = rootView;
-    this.calendar = calendar;
-    this.recyclerEvents = recyclerEvents;
-    this.recyclerGroups = recyclerGroups;
-    this.searchView = searchView;
+    this.toolbarSearch = toolbarSearch;
   }
 
   @Override
@@ -70,32 +53,13 @@ public final class ActivitySearchBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.calendar;
-      ImageView calendar = ViewBindings.findChildViewById(rootView, id);
-      if (calendar == null) {
+      id = R.id.toolbar_search;
+      Toolbar toolbarSearch = rootView.findViewById(id);
+      if (toolbarSearch == null) {
         break missingId;
       }
 
-      id = R.id.recycler_events;
-      RecyclerView recyclerEvents = ViewBindings.findChildViewById(rootView, id);
-      if (recyclerEvents == null) {
-        break missingId;
-      }
-
-      id = R.id.recycler_groups;
-      RecyclerView recyclerGroups = ViewBindings.findChildViewById(rootView, id);
-      if (recyclerGroups == null) {
-        break missingId;
-      }
-
-      id = R.id.search_view;
-      SearchView searchView = ViewBindings.findChildViewById(rootView, id);
-      if (searchView == null) {
-        break missingId;
-      }
-
-      return new ActivitySearchBinding((ScrollView) rootView, calendar, recyclerEvents,
-          recyclerGroups, searchView);
+      return new ActivitySearchBinding((ScrollView) rootView, toolbarSearch);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

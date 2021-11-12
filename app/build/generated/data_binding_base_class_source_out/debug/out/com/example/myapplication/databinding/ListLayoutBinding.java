@@ -9,7 +9,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.viewbinding.ViewBinding;
-import androidx.viewbinding.ViewBindings;
 import com.example.myapplication.R;
 import com.google.android.material.imageview.ShapeableImageView;
 import java.lang.NullPointerException;
@@ -67,13 +66,13 @@ public final class ListLayoutBinding implements ViewBinding {
       CardView cardViewGroup = (CardView) rootView;
 
       id = R.id.ivOfClubList;
-      ShapeableImageView ivOfClubList = ViewBindings.findChildViewById(rootView, id);
+      ShapeableImageView ivOfClubList = rootView.findViewById(id);
       if (ivOfClubList == null) {
         break missingId;
       }
 
       id = R.id.txtView;
-      TextView txtView = ViewBindings.findChildViewById(rootView, id);
+      TextView txtView = rootView.findViewById(id);
       if (txtView == null) {
         break missingId;
       }

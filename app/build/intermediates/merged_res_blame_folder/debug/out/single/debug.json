@@ -1,330 +1,194 @@
 [
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_add.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\ic_add.xml"
+        "merged": "/home/aliia/StudioProjects/BishMeet/app/build/intermediates/res/merged/debug/drawable_time.xml.flat",
+        "source": "/home/aliia/StudioProjects/BishMeet/app/src/main/res/drawable/time.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_ftt.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\ftt.png"
+        "merged": "/home/aliia/StudioProjects/BishMeet/app/build/intermediates/res/merged/debug/drawable_ic_baseline_cancel_24.xml.flat",
+        "source": "/home/aliia/StudioProjects/BishMeet/app/src/main/res/drawable/ic_baseline_cancel_24.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_bishmeet_logo.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\bishmeet_logo.png"
+        "merged": "/home/aliia/StudioProjects/BishMeet/app/build/intermediates/res/merged/debug/drawable_corner_radius.xml.flat",
+        "source": "/home/aliia/StudioProjects/BishMeet/app/src/main/res/drawable/corner_radius.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_check_white.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\ic_baseline_check_white.xml"
+        "merged": "/home/aliia/StudioProjects/BishMeet/app/build/intermediates/res/merged/debug/drawable_ic_baseline_person_24.xml.flat",
+        "source": "/home/aliia/StudioProjects/BishMeet/app/src/main/res/drawable/ic_baseline_person_24.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_profile.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\layout\\fragment_profile.xml"
+        "merged": "/home/aliia/StudioProjects/BishMeet/app/build/intermediates/res/merged/debug/drawable_shaper.xml.flat",
+        "source": "/home/aliia/StudioProjects/BishMeet/app/src/main/res/drawable/shaper.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "/home/aliia/StudioProjects/BishMeet/app/build/intermediates/res/merged/debug/drawable_ic_library_add.xml.flat",
+        "source": "/home/aliia/StudioProjects/BishMeet/app/src/main/res/drawable/ic_library_add.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_foreground.png"
+        "merged": "/home/aliia/StudioProjects/BishMeet/app/build/intermediates/res/merged/debug/drawable_ic_favorite.xml.flat",
+        "source": "/home/aliia/StudioProjects/BishMeet/app/src/main/res/drawable/ic_favorite.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.webp"
+        "merged": "/home/aliia/StudioProjects/BishMeet/app/build/intermediates/res/merged/debug/drawable_ic_baseline_calendar_today_24.xml.flat",
+        "source": "/home/aliia/StudioProjects/BishMeet/app/src/main/res/drawable/ic_baseline_calendar_today_24.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\menu_bottom_navigation_menu.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\menu\\bottom_navigation_menu.xml"
+        "merged": "/home/aliia/StudioProjects/BishMeet/app/build/intermediates/res/merged/debug/layout_activity_edit_profile.xml.flat",
+        "source": "/home/aliia/StudioProjects/BishMeet/app/src/main/res/layout/activity_edit_profile.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_library_add.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\ic_library_add.xml"
+        "merged": "/home/aliia/StudioProjects/BishMeet/app/build/intermediates/res/merged/debug/drawable_ic_baseline_photo_camera_24.xml.flat",
+        "source": "/home/aliia/StudioProjects/BishMeet/app/src/main/res/drawable/ic_baseline_photo_camera_24.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_cancel_24.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\ic_baseline_cancel_24.xml"
+        "merged": "/home/aliia/StudioProjects/BishMeet/app/build/intermediates/res/merged/debug/drawable_ic_baseline_search_24.xml.flat",
+        "source": "/home/aliia/StudioProjects/BishMeet/app/src/main/res/drawable/ic_baseline_search_24.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_prof2.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\prof2.png"
+        "merged": "/home/aliia/StudioProjects/BishMeet/app/build/intermediates/res/merged/debug/layout_activity_create_new_event.xml.flat",
+        "source": "/home/aliia/StudioProjects/BishMeet/app/src/main/res/layout/activity_create_new_event.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_prof5.jpg.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\prof5.jpg"
+        "merged": "/home/aliia/StudioProjects/BishMeet/app/build/intermediates/res/merged/debug/layout_fragment_home.xml.flat",
+        "source": "/home/aliia/StudioProjects/BishMeet/app/src/main/res/layout/fragment_home.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_person_24.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\ic_baseline_person_24.xml"
+        "merged": "/home/aliia/StudioProjects/BishMeet/app/build/intermediates/res/merged/debug/drawable_ic_baseline_close_24.xml.flat",
+        "source": "/home/aliia/StudioProjects/BishMeet/app/src/main/res/drawable/ic_baseline_close_24.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "/home/aliia/StudioProjects/BishMeet/app/build/intermediates/res/merged/debug/layout_card_list_layout.xml.flat",
+        "source": "/home/aliia/StudioProjects/BishMeet/app/src/main/res/layout/card_list_layout.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_time.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\time.xml"
+        "merged": "/home/aliia/StudioProjects/BishMeet/app/build/intermediates/res/merged/debug/drawable_prof2.png.flat",
+        "source": "/home/aliia/StudioProjects/BishMeet/app/src/main/res/drawable/prof2.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_location.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\ic_location.xml"
+        "merged": "/home/aliia/StudioProjects/BishMeet/app/build/intermediates/res/merged/debug/drawable_bikeclub.png.flat",
+        "source": "/home/aliia/StudioProjects/BishMeet/app/src/main/res/drawable/bikeclub.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_avatar.jpeg.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\avatar.jpeg"
+        "merged": "/home/aliia/StudioProjects/BishMeet/app/build/intermediates/res/merged/debug/drawable_round_for_category.xml.flat",
+        "source": "/home/aliia/StudioProjects/BishMeet/app/src/main/res/drawable/round_for_category.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_detailed_group.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\layout\\activity_detailed_group.xml"
+        "merged": "/home/aliia/StudioProjects/BishMeet/app/build/intermediates/res/merged/debug/drawable_rounded_shape.xml.flat",
+        "source": "/home/aliia/StudioProjects/BishMeet/app/src/main/res/drawable/rounded_shape.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_create_new_event.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\layout\\activity_create_new_event.xml"
+        "merged": "/home/aliia/StudioProjects/BishMeet/app/build/intermediates/res/merged/debug/drawable_ic_baseline_home_24.xml.flat",
+        "source": "/home/aliia/StudioProjects/BishMeet/app/src/main/res/drawable/ic_baseline_home_24.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_login.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\layout\\activity_login.xml"
+        "merged": "/home/aliia/StudioProjects/BishMeet/app/build/intermediates/res/merged/debug/layout_activity_entry_page.xml.flat",
+        "source": "/home/aliia/StudioProjects/BishMeet/app/src/main/res/layout/activity_entry_page.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_shaper.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\shaper.xml"
+        "merged": "/home/aliia/StudioProjects/BishMeet/app/build/intermediates/res/merged/debug/layout_activity_search.xml.flat",
+        "source": "/home/aliia/StudioProjects/BishMeet/app/src/main/res/layout/activity_search.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_home_24.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\ic_baseline_home_24.xml"
+        "merged": "/home/aliia/StudioProjects/BishMeet/app/build/intermediates/res/merged/debug/layout_list_layout.xml.flat",
+        "source": "/home/aliia/StudioProjects/BishMeet/app/src/main/res/layout/list_layout.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_favorite.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\ic_favorite.xml"
+        "merged": "/home/aliia/StudioProjects/BishMeet/app/build/intermediates/res/merged/debug/layout_activity_reset_password.xml.flat",
+        "source": "/home/aliia/StudioProjects/BishMeet/app/src/main/res/layout/activity_reset_password.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_register_page.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\layout\\activity_register_page.xml"
+        "merged": "/home/aliia/StudioProjects/BishMeet/app/build/intermediates/res/merged/debug/drawable_ic_baseline_check_circle_outline_24.xml.flat",
+        "source": "/home/aliia/StudioProjects/BishMeet/app/src/main/res/drawable/ic_baseline_check_circle_outline_24.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_willgo.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\willgo.png"
+        "merged": "/home/aliia/StudioProjects/BishMeet/app/build/intermediates/res/merged/debug/drawable_image.png.flat",
+        "source": "/home/aliia/StudioProjects/BishMeet/app/src/main/res/drawable/image.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_event_detailed.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\layout\\activity_event_detailed.xml"
+        "merged": "/home/aliia/StudioProjects/BishMeet/app/build/intermediates/res/merged/debug/layout_dropdown_item.xml.flat",
+        "source": "/home/aliia/StudioProjects/BishMeet/app/src/main/res/layout/dropdown_item.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_gdgfoto.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\gdgfoto.png"
+        "merged": "/home/aliia/StudioProjects/BishMeet/app/build/intermediates/res/merged/debug/drawable_prof5.jpg.flat",
+        "source": "/home/aliia/StudioProjects/BishMeet/app/src/main/res/drawable/prof5.jpg"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp"
+        "merged": "/home/aliia/StudioProjects/BishMeet/app/build/intermediates/res/merged/debug/layout_activity_login.xml.flat",
+        "source": "/home/aliia/StudioProjects/BishMeet/app/src/main/res/layout/activity_login.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_logo.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable-v24\\logo.png"
+        "merged": "/home/aliia/StudioProjects/BishMeet/app/build/intermediates/res/merged/debug/layout_activity_detailed_group.xml.flat",
+        "source": "/home/aliia/StudioProjects/BishMeet/app/src/main/res/layout/activity_detailed_group.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+        "merged": "/home/aliia/StudioProjects/BishMeet/app/build/intermediates/res/merged/debug/layout_activity_main.xml.flat",
+        "source": "/home/aliia/StudioProjects/BishMeet/app/src/main/res/layout/activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_favorite_24.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\ic_baseline_favorite_24.xml"
+        "merged": "/home/aliia/StudioProjects/BishMeet/app/build/intermediates/res/merged/debug/drawable_rounded_corn.xml.flat",
+        "source": "/home/aliia/StudioProjects/BishMeet/app/src/main/res/drawable/rounded_corn.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_close_24.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\ic_baseline_close_24.xml"
+        "merged": "/home/aliia/StudioProjects/BishMeet/app/build/intermediates/res/merged/debug/drawable-v24_logo.png.flat",
+        "source": "/home/aliia/StudioProjects/BishMeet/app/src/main/res/drawable-v24/logo.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_image.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\image.png"
+        "merged": "/home/aliia/StudioProjects/BishMeet/app/build/intermediates/res/merged/debug/layout_activity_register_page.xml.flat",
+        "source": "/home/aliia/StudioProjects/BishMeet/app/src/main/res/layout/activity_register_page.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_entry_page.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\layout\\activity_entry_page.xml"
+        "merged": "/home/aliia/StudioProjects/BishMeet/app/build/intermediates/res/merged/debug/drawable_arrow_back.xml.flat",
+        "source": "/home/aliia/StudioProjects/BishMeet/app/src/main/res/drawable/arrow_back.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.webp"
+        "merged": "/home/aliia/StudioProjects/BishMeet/app/build/intermediates/res/merged/debug/menu_main_menu.xml.flat",
+        "source": "/home/aliia/StudioProjects/BishMeet/app/src/main/res/menu/main_menu.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_favorite.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\favorite.xml"
+        "merged": "/home/aliia/StudioProjects/BishMeet/app/build/intermediates/res/merged/debug/drawable_ftt.png.flat",
+        "source": "/home/aliia/StudioProjects/BishMeet/app/src/main/res/drawable/ftt.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
+        "merged": "/home/aliia/StudioProjects/BishMeet/app/build/intermediates/res/merged/debug/drawable_ic_add.xml.flat",
+        "source": "/home/aliia/StudioProjects/BishMeet/app/src/main/res/drawable/ic_add.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_foreground.png"
+        "merged": "/home/aliia/StudioProjects/BishMeet/app/build/intermediates/res/merged/debug/menu_bottom_navigation_menu.xml.flat",
+        "source": "/home/aliia/StudioProjects/BishMeet/app/src/main/res/menu/bottom_navigation_menu.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_prof4.jpg.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\prof4.jpg"
+        "merged": "/home/aliia/StudioProjects/BishMeet/app/build/intermediates/res/merged/debug/drawable_ic_baseline_location_on_24.xml.flat",
+        "source": "/home/aliia/StudioProjects/BishMeet/app/src/main/res/drawable/ic_baseline_location_on_24.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_dontgo.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\dontgo.png"
+        "merged": "/home/aliia/StudioProjects/BishMeet/app/build/intermediates/res/merged/debug/drawable_prof4.jpg.flat",
+        "source": "/home/aliia/StudioProjects/BishMeet/app/src/main/res/drawable/prof4.jpg"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_arrow_back.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\arrow_back.xml"
+        "merged": "/home/aliia/StudioProjects/BishMeet/app/build/intermediates/res/merged/debug/layout_fragment_profile.xml.flat",
+        "source": "/home/aliia/StudioProjects/BishMeet/app/src/main/res/layout/fragment_profile.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+        "merged": "/home/aliia/StudioProjects/BishMeet/app/build/intermediates/res/merged/debug/drawable_bishmeet_logo.png.flat",
+        "source": "/home/aliia/StudioProjects/BishMeet/app/src/main/res/drawable/bishmeet_logo.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_check_circle_outline_24.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\ic_baseline_check_circle_outline_24.xml"
+        "merged": "/home/aliia/StudioProjects/BishMeet/app/build/intermediates/res/merged/debug/layout_activity_create_new_group.xml.flat",
+        "source": "/home/aliia/StudioProjects/BishMeet/app/src/main/res/layout/activity_create_new_group.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_create.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\ic_create.xml"
+        "merged": "/home/aliia/StudioProjects/BishMeet/app/build/intermediates/res/merged/debug/drawable_ic_create.xml.flat",
+        "source": "/home/aliia/StudioProjects/BishMeet/app/src/main/res/drawable/ic_create.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_calendar_today_24.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\ic_baseline_calendar_today_24.xml"
+        "merged": "/home/aliia/StudioProjects/BishMeet/app/build/intermediates/res/merged/debug/drawable_rounded_bnav.xml.flat",
+        "source": "/home/aliia/StudioProjects/BishMeet/app/src/main/res/drawable/rounded_bnav.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_search.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\layout\\activity_search.xml"
+        "merged": "/home/aliia/StudioProjects/BishMeet/app/build/intermediates/res/merged/debug/layout_activity_event_detailed.xml.flat",
+        "source": "/home/aliia/StudioProjects/BishMeet/app/src/main/res/layout/activity_event_detailed.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_vector.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\ic_vector.png"
-    },
-    {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\layout\\activity_main.xml"
-    },
-    {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_home.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\layout\\fragment_home.xml"
-    },
-    {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\layout_dropdown_item.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\layout\\dropdown_item.xml"
-    },
-    {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.webp"
-    },
-    {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_location_on_24.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\ic_baseline_location_on_24.xml"
-    },
-    {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.webp"
-    },
-    {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_search_24.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\ic_baseline_search_24.xml"
-    },
-    {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_rounded_corn.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\rounded_corn.xml"
-    },
-    {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_prof1.gif.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\prof1.gif"
-    },
-    {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.webp"
-    },
-    {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.webp"
-    },
-    {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_edit_profile.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\layout\\activity_edit_profile.xml"
-    },
-    {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_white_check.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\ic_white_check.xml"
-    },
-    {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_photo_camera_24.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\ic_baseline_photo_camera_24.xml"
-    },
-    {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_prof.jpg.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\prof.jpg"
-    },
-    {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.webp"
-    },
-    {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_foreground.png"
-    },
-    {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_keyboard_arrow_right_24.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\ic_baseline_keyboard_arrow_right_24.xml"
-    },
-    {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\layout_list_layout.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\layout\\list_layout.xml"
-    },
-    {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_foreground.png"
-    },
-    {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_rocket.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\rocket.png"
-    },
-    {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_create_24.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\ic_baseline_create_24.xml"
-    },
-    {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_rounded_shape.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\rounded_shape.xml"
-    },
-    {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_calendar.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\layout\\fragment_calendar.xml"
-    },
-    {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_bikeclub.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\bikeclub.png"
-    },
-    {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_corner_radius.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\corner_radius.xml"
-    },
-    {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_app_logo.jpg.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable-v24\\app_logo.jpg"
-    },
-    {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_home_after_authorization.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\layout\\activity_home_after_authorization.xml"
-    },
-    {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_arrow_back_24.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\ic_baseline_arrow_back_24.xml"
-    },
-    {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_create_new_group.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\layout\\activity_create_new_group.xml"
-    },
-    {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\drawable_shape_file.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\drawable\\shape_file.xml"
-    },
-    {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\layout_card_list_layout.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\layout\\card_list_layout.xml"
-    },
-    {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.webp"
-    },
-    {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_reset_password.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\MyApplication2\\app\\src\\main\\res\\layout\\activity_reset_password.xml"
+        "merged": "/home/aliia/StudioProjects/BishMeet/app/build/intermediates/res/merged/debug/layout_activity_home_after_authorization.xml.flat",
+        "source": "/home/aliia/StudioProjects/BishMeet/app/src/main/res/layout/activity_home_after_authorization.xml"
     }
 ]

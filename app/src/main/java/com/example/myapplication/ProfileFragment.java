@@ -96,7 +96,7 @@ public class ProfileFragment extends Fragment {
                 myProfileName.setText(user.name);
                 MyProfileSurname.setText(user.surname);
                 MyProfileCity.setText(user.city);
-                Picasso.get().load(Uri.parse(user.imgUri)).into(myProfile_Foto);
+//                Picasso.get().load(Uri.parse(user.imgUri)).into(myProfile_Foto);
             }
 
             @Override
