@@ -218,7 +218,7 @@ public class ProfileFragment extends Fragment {
     }
 
     private void initRecycler(List<NewGroupData> mItems) {
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.HORIZONTAL, true));
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.HORIZONTAL, false));
         mAdapter = new GroupsAdapter(getActivity(), mItems);
         mRecyclerView.setAdapter(mAdapter);
 

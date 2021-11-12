@@ -5,14 +5,9 @@
         android:enabled="true"
         android:icon="@drawable/ic_baseline_home_24"
         android:title="Главное"/>
-    <item
-        android:id="@+id/page_2"
-        android:enabled="true"
-        android:icon="@drawable/ic_baseline_calendar_today_24"
-        android:title="Календарь"/>
 
     <item
-        android:id="@+id/page_3"
+        android:id="@+id/page_2"
         android:enabled="true"
         android:icon="@drawable/ic_baseline_person_24"
         android:title="Профиль"/>

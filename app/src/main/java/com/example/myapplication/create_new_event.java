@@ -42,9 +42,11 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.StorageTask;
 import com.google.firebase.storage.UploadTask;
 
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -62,7 +64,7 @@ public class create_new_event extends AppCompatActivity {
     private String EVENT_KEY = "events";
     private static final int PICK_IMAGE_REQUEST = 1;
 
-    EditText mdateformat;
+    EditText mdateformat, hour_time;
     int year;
     int month;
     int day;
@@ -138,6 +140,8 @@ public class create_new_event extends AppCompatActivity {
         });
 
         mdateformat = findViewById(R.id.dateformat);
+
+        hour_time = findViewById(R.id.hour_minute);
         Calendar calendar = Calendar.getInstance();
         mdateformat.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -145,8 +149,6 @@ public class create_new_event extends AppCompatActivity {
                 year = calendar.get(Calendar.YEAR);
                 month = calendar.get(Calendar.MONTH);
                 day = calendar.get(Calendar.DAY_OF_MONTH);
-                //hour = calendar.get(Calendar.HOUR_OF_DAY);
-                //minute= calendar.get(Calendar.MINUTE);
 
                 DatePickerDialog datePickerDialog = new DatePickerDialog(create_new_event.this, new DatePickerDialog.OnDateSetListener() {
                     @Override
@@ -161,41 +163,59 @@ public class create_new_event extends AppCompatActivity {
                 datePickerDialog.show();
             }
         });
-
-    }
-
-    private void initDropDown(List<String> items) {
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.dropdown_item, items);
-        dropDownText.setText(adapter.getItem(0).toString(), false);
-        dropDownText.setAdapter(adapter);
-
-    }
-
-    public void createEvent(View view) {
-        String event_id = mDatabase.push().getKey();
-        String group_id = dropDownText.getText().toString().trim();
-        String event_title = titlevent.getText().toString().trim();
-        String event_decription = Evdescription.getText().toString().trim();
-        String event_location = eventLocation.getText().toString().trim();
-        String event_date = mdateformat.getText().toString().trim();
-        Map<String, User> users = new HashMap<>();
-
-        DatabaseReference mDatareference = FirebaseDatabase.getInstance().getReference("groups").child(group_id);
-
-        mDatareference.addValueEventListener(new ValueEventListener() {
+        hour_time.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                NewGroupData groupData = snapshot.getValue(NewGroupData.class);
-                String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
-                DatabaseReference userDatabase = FirebaseDatabase.getInstance().getReference("User")
-                        .child(userId);
-                userDatabase.addValueEventListener(new ValueEventListener() {
+            public void onClick(View view) {
+                hour = calendar.get(Calendar.HOUR_OF_DAY);
+                minute = calendar.get(Calendar.MINUTE);
+                hour_time.setText(SimpleDateFormat.getTimeInstance().format(calendar.getTime()));
+
+
+            }
+        });
+
+    }
+
+        private void initDropDown(List<String> items) {
+                ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.dropdown_item, items);
+                dropDownText.setText(adapter.getItem(0).toString(), false);
+                dropDownText.setAdapter(adapter);
+
+            }
+
+            public void createEvent(View view) {
+                String event_id = mDatabase.push().getKey();
+                String group_id = dropDownText.getText().toString().trim();
+                String event_title = titlevent.getText().toString().trim();
+                String event_decription = Evdescription.getText().toString().trim();
+                String event_location = eventLocation.getText().toString().trim();
+                String event_date = mdateformat.getText().toString().trim();
+                Map<String, User> users = new HashMap<>();
+
+                DatabaseReference mDatareference = FirebaseDatabase.getInstance().getReference("groups").child(group_id);
+
+                mDatareference.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        User user = snapshot.getValue(User.class);
-                        users.put(userId, user);
-                        createDb(new NewEvent(event_id, groupData, event_title,
-                                event_decription, event_location, event_date, users, " "));
+                        NewGroupData groupData = snapshot.getValue(NewGroupData.class);
+                        String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+                        DatabaseReference userDatabase = FirebaseDatabase.getInstance().getReference("User")
+                                .child(userId);
+                        userDatabase.addValueEventListener(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                User user = snapshot.getValue(User.class);
+                                users.put(userId, user);
+                                createDb(new NewEvent(event_id, groupData, event_title,
+                                        event_decription, event_location, event_date, users, " "));
+
+                            }
+
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError error) {
+
+                            }
+                        });
 
                     }
 
@@ -205,97 +225,91 @@ public class create_new_event extends AppCompatActivity {
                     }
                 });
 
+                Toast.makeText(create_new_event.this, "Загрузка...", Toast.LENGTH_LONG).show();
+                PackageManager pm = getPackageManager();
+                pm.setComponentEnabledSetting(new ComponentName(create_new_event.this, Create_new_group.class),
+                        PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP);
             }
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
+            public void createDb(NewEvent event) {
 
+                if (!TextUtils.isEmpty(event.eventTitle)) {
+                    mDatabase.child(event.Event_id).setValue(event);
+                    uploadFile(event.Event_id);
+                } else {
+                    Toast.makeText(create_new_event.this, "Введите название", Toast.LENGTH_SHORT).show();
+                }
             }
-        });
 
-        Toast.makeText(create_new_event.this, "Загрузка...", Toast.LENGTH_LONG).show();
-        PackageManager pm = getPackageManager();
-        pm.setComponentEnabledSetting(new ComponentName(create_new_event.this, Create_new_group.class),
-                PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP);
-    }
+            public void selectFoto(View view) {
+                Intent intent = new Intent();
+                intent.setType("image/*");
+                intent.setAction(Intent.ACTION_GET_CONTENT);
+                startActivityForResult(intent, PICK_IMAGE_REQUEST);
+            }
 
-    public void createDb(NewEvent event) {
+            private String getFileExtension(Uri uri) {
+                ContentResolver cR = getContentResolver();
+                MimeTypeMap mime = MimeTypeMap.getSingleton();
+                return mime.getExtensionFromMimeType(cR.getType(uri));
+            }
 
-        if (!TextUtils.isEmpty(event.eventTitle)) {
-            mDatabase.child(event.Event_id).setValue(event);
-            uploadFile(event.Event_id);
-        } else {
-            Toast.makeText(this, "Введите название", Toast.LENGTH_SHORT).show();
-        }
-    }
-
-    public void selectFoto(View view) {
-        Intent intent = new Intent();
-        intent.setType("image/*");
-        intent.setAction(Intent.ACTION_GET_CONTENT);
-        startActivityForResult(intent, PICK_IMAGE_REQUEST);
-    }
-
-    private String getFileExtension(Uri uri) {
-        ContentResolver cR = getContentResolver();
-        MimeTypeMap mime = MimeTypeMap.getSingleton();
-        return mime.getExtensionFromMimeType(cR.getType(uri));
-    }
-
-    private void uploadFile(String key) {
-        if (uri != null) {
-            StorageReference fileReference = mStorage.child(System.currentTimeMillis() + "." + getFileExtension(uri));
-            storageTask = fileReference.putFile(uri)
-                    .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                        @Override
-                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                            Log.e("Create_NewEvent", "Done OnSuccess");
-                            Task<Uri> downloadUri = fileReference.getDownloadUrl();
-                            downloadUri.addOnSuccessListener(new OnSuccessListener<Uri>() {
+            private void uploadFile(String key) {
+                if (uri != null) {
+                    StorageReference fileReference = mStorage.child(System.currentTimeMillis() + "." + getFileExtension(uri));
+                    storageTask = fileReference.putFile(uri)
+                            .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                                 @Override
-                                public void onSuccess(Uri uri) {
-                                    String imageUrl = uri.toString();
-                                    mDatabase.child(key).child("event_image").setValue(imageUrl);
+                                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                                    Log.e("Create_NewEvent", "Done OnSuccess");
+                                    Task<Uri> downloadUri = fileReference.getDownloadUrl();
+                                    downloadUri.addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                        @Override
+                                        public void onSuccess(Uri uri) {
+                                            String imageUrl = uri.toString();
+                                            mDatabase.child(key).child("event_image").setValue(imageUrl);
+                                        }
+                                    });
+                                }
+                            }).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
+                                @Override
+                                public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
+                                    Log.e("Create_Newevent", "Done OnComplete");
+                                    Toast.makeText(create_new_event.this, "Добавлена", Toast.LENGTH_SHORT).show();
+                                    finish();
+                                }
+                            }).addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+
+                                    Log.e("Create_NewGRoup", e.getMessage());
+                                    Toast.makeText(create_new_event.this, "Ошибка", Toast.LENGTH_LONG).show();
+                                    PackageManager pm = getPackageManager();
+                                    pm.setComponentEnabledSetting(new ComponentName(create_new_event.this, Create_new_group.class),
+                                            PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP);
                                 }
                             });
-                        }
-                    }).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
-                        @Override
-                        public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
-                            Log.e("Create_Newevent", "Done OnComplete");
-                            Toast.makeText(create_new_event.this, "Добавлена", Toast.LENGTH_SHORT).show();
-                            finish();
-                        }
-                    }).addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
-
-                            Log.e("Create_NewGRoup", e.getMessage());
-                            Toast.makeText(create_new_event.this, "Ошибка", Toast.LENGTH_LONG).show();
-                            PackageManager pm = getPackageManager();
-                            pm.setComponentEnabledSetting(new ComponentName(create_new_event.this, Create_new_group.class),
-                                    PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP);
-                        }
-                    });
-        } else {
-            Toast.makeText(this, "Файл не выбран", Toast.LENGTH_SHORT).show();
-        }
+                } else {
+                    Toast.makeText(create_new_event.this, "Файл не выбран", Toast.LENGTH_SHORT).show();
+                }
 
 
-    }
-
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK
-                && data != null && data.getData() != null) {
-            uri = data.getData();
-            if (resultCode == RESULT_OK) {
-                Log.d("My tag", "Image uri" + data.getData());
-                Event_imgView.setImageURI(data.getData());
             }
-        }
+
+
+
+            protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+                super.onActivityResult(requestCode, resultCode, data);
+                if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK
+                        && data != null && data.getData() != null) {
+                    uri = data.getData();
+                    if (resultCode == RESULT_OK) {
+                        Log.d("My tag", "Image uri" + data.getData());
+                        Event_imgView.setImageURI(data.getData());
+                    }
+                }
+            }
     }
 
 
-}
+

@@ -33,10 +33,8 @@ public class Home_after_authorization extends AppCompatActivity implements Navig
             case R.id.page_1:
                 mFragm.beginTransaction().replace(R.id.contnr, new HomeFragment()).commit();
                 break;
+
             case R.id.page_2:
-                mFragm.beginTransaction().replace(R.id.contnr, new CalendarFragment()).commit();
-                break;
-            case R.id.page_3:
                 mFragm.beginTransaction().replace(R.id.contnr, new ProfileFragment()).commit();
                 break;
         }

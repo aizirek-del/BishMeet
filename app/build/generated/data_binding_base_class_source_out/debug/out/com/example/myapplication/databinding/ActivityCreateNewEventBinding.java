@@ -45,6 +45,9 @@ public final class ActivityCreateNewEventBinding implements ViewBinding {
   public final ImageButton gobck;
 
   @NonNull
+  public final TextInputEditText hourMinute;
+
+  @NonNull
   public final Button initbtn;
 
   @NonNull
@@ -54,7 +57,8 @@ public final class ActivityCreateNewEventBinding implements ViewBinding {
       @NonNull ImageView addEventImg, @NonNull AutoCompleteTextView autoComplete,
       @NonNull TextInputEditText dateformat, @NonNull TextInputEditText eventDescription,
       @NonNull TextInputEditText eventLocation, @NonNull TextInputEditText eventTitle,
-      @NonNull ImageButton gobck, @NonNull Button initbtn, @NonNull Button selectFoto) {
+      @NonNull ImageButton gobck, @NonNull TextInputEditText hourMinute, @NonNull Button initbtn,
+      @NonNull Button selectFoto) {
     this.rootView = rootView;
     this.addEventImg = addEventImg;
     this.autoComplete = autoComplete;
@@ -63,6 +67,7 @@ public final class ActivityCreateNewEventBinding implements ViewBinding {
     this.eventLocation = eventLocation;
     this.eventTitle = eventTitle;
     this.gobck = gobck;
+    this.hourMinute = hourMinute;
     this.initbtn = initbtn;
     this.selectFoto = selectFoto;
   }
@@ -136,6 +141,12 @@ public final class ActivityCreateNewEventBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.hour_minute;
+      TextInputEditText hourMinute = ViewBindings.findChildViewById(rootView, id);
+      if (hourMinute == null) {
+        break missingId;
+      }
+
       id = R.id.initbtn;
       Button initbtn = ViewBindings.findChildViewById(rootView, id);
       if (initbtn == null) {
@@ -149,7 +160,8 @@ public final class ActivityCreateNewEventBinding implements ViewBinding {
       }
 
       return new ActivityCreateNewEventBinding((ScrollView) rootView, addEventImg, autoComplete,
-          dateformat, eventDescription, eventLocation, eventTitle, gobck, initbtn, selectFoto);
+          dateformat, eventDescription, eventLocation, eventTitle, gobck, hourMinute, initbtn,
+          selectFoto);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
