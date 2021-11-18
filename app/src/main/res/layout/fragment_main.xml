@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SearchFragm">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Закрыть"
+        android:textColor="#4568E4"
+        android:layout_marginStart="310dp"
+        android:layout_marginTop="10dp"
+        />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:src="@drawable/rocket"
+        android:layout_marginTop="20dp"
+
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Зарегистрируйтесь, чтобы продолжить"
+        android:textColor="@color/black"
+        android:layout_marginStart="44dp"
+        android:layout_marginEnd="45dp"
+        android:textSize="24sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:text="Присоединяйтесь к группам и мероприятиям.      Просматривайте ближайшие события."
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Зарегистрироваться"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/rounded_shape"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="16dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Уже есть аккаунт?"
+            android:layout_marginStart="75dp"/>
+        <TextView
+            android:id="@+id/enterTologin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Войдите"
+            android:layout_marginStart="10dp"
+            android:textColor="#4568E4"/>
+
+    </LinearLayout>
+
+</LinearLayout>

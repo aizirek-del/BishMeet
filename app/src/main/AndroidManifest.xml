@@ -17,6 +17,9 @@
         android:theme="@style/Theme.MyApplication"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".GuestPage"
+            android:exported="true" />
+        <activity
             android:name=".Event_detailed"
             android:exported="true" />
         <activity
@@ -45,19 +48,18 @@
             android:exported="true" />
         <activity
             android:name=".Create_new_group"
-            android:exported="true"/>
-        <activity android:name=".Search"
-            android:exported="true"/>
-
+            android:exported="true" />
+        <activity
+            android:name=".Search"
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
     </application>
 
