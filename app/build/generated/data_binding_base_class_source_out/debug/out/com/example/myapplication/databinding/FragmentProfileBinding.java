@@ -4,7 +4,6 @@ package com.example.myapplication.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
@@ -26,9 +25,6 @@ public final class FragmentProfileBinding implements ViewBinding {
 
   @NonNull
   public final ShapeableImageView MyProfileFoto;
-
-  @NonNull
-  public final ImageButton backArrow;
 
   @NonNull
   public final ImageView editProfilePage;
@@ -61,15 +57,13 @@ public final class FragmentProfileBinding implements ViewBinding {
   public final ProgressBar prog;
 
   private FragmentProfileBinding(@NonNull ScrollView rootView,
-      @NonNull ShapeableImageView MyProfileFoto, @NonNull ImageButton backArrow,
-      @NonNull ImageView editProfilePage, @NonNull TextView events, @NonNull ProgressBar inProg,
-      @NonNull TextView myProfileCity, @NonNull TextView myprofileName,
-      @NonNull TextView myprofileSurname, @NonNull RecyclerView profileHorRecyclerView,
-      @NonNull LinearLayout profilesLayout, @NonNull RecyclerView profilesVertRecyclerView,
-      @NonNull ProgressBar prog) {
+      @NonNull ShapeableImageView MyProfileFoto, @NonNull ImageView editProfilePage,
+      @NonNull TextView events, @NonNull ProgressBar inProg, @NonNull TextView myProfileCity,
+      @NonNull TextView myprofileName, @NonNull TextView myprofileSurname,
+      @NonNull RecyclerView profileHorRecyclerView, @NonNull LinearLayout profilesLayout,
+      @NonNull RecyclerView profilesVertRecyclerView, @NonNull ProgressBar prog) {
     this.rootView = rootView;
     this.MyProfileFoto = MyProfileFoto;
-    this.backArrow = backArrow;
     this.editProfilePage = editProfilePage;
     this.events = events;
     this.inProg = inProg;
@@ -112,12 +106,6 @@ public final class FragmentProfileBinding implements ViewBinding {
       id = R.id.MyProfile_foto;
       ShapeableImageView MyProfileFoto = rootView.findViewById(id);
       if (MyProfileFoto == null) {
-        break missingId;
-      }
-
-      id = R.id.backArrow;
-      ImageButton backArrow = rootView.findViewById(id);
-      if (backArrow == null) {
         break missingId;
       }
 
@@ -181,9 +169,9 @@ public final class FragmentProfileBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentProfileBinding((ScrollView) rootView, MyProfileFoto, backArrow,
-          editProfilePage, events, inProg, myProfileCity, myprofileName, myprofileSurname,
-          profileHorRecyclerView, profilesLayout, profilesVertRecyclerView, prog);
+      return new FragmentProfileBinding((ScrollView) rootView, MyProfileFoto, editProfilePage,
+          events, inProg, myProfileCity, myprofileName, myprofileSurname, profileHorRecyclerView,
+          profilesLayout, profilesVertRecyclerView, prog);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

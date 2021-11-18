@@ -25,14 +25,6 @@
                 android:orientation="horizontal">
 
 
-                <ImageButton
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#4568E4"
-                    android:layout_marginTop="5dp"
-                    android:id="@+id/backArrow"
-                    android:src="@drawable/arrow_back"/>
 
 
                 <com.google.android.material.appbar.MaterialToolbar
@@ -132,13 +124,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/prog"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="6dp"
             />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="5dp"
 
             />
 
@@ -146,14 +138,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginTop="45dp">
+            android:layout_marginTop="6dp">
 
             <TextView
                 android:id="@+id/events"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
                 android:text="Мои мероприятия"
                 android:textColor="@color/black"
                 android:textSize="24sp" />
@@ -163,14 +154,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/in_prog"
-                android:layout_marginTop="16dp"
+
                 />
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/profiles_vert_recycler_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginTop="16dp"
                 android:layout_marginStart="16dp"
                 tools:listitem="@layout/card_list_layout">
 

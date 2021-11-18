@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -39,16 +38,10 @@ public final class FragmentHomeBinding implements ViewBinding {
   public final ProgressBar inProgress;
 
   @NonNull
-  public final LinearLayout linearLayout;
-
-  @NonNull
   public final ProgressBar progressBAr;
 
   @NonNull
   public final RecyclerView verticalRecyclerView;
-
-  @NonNull
-  public final View view;
 
   @NonNull
   public final Button wholeList;
@@ -56,18 +49,16 @@ public final class FragmentHomeBinding implements ViewBinding {
   private FragmentHomeBinding(@NonNull RelativeLayout rootView, @NonNull Button WillGoBtn,
       @NonNull TextView events, @NonNull FloatingActionButton fabButton,
       @NonNull RecyclerView horizontalRecyclerView, @NonNull ProgressBar inProgress,
-      @NonNull LinearLayout linearLayout, @NonNull ProgressBar progressBAr,
-      @NonNull RecyclerView verticalRecyclerView, @NonNull View view, @NonNull Button wholeList) {
+      @NonNull ProgressBar progressBAr, @NonNull RecyclerView verticalRecyclerView,
+      @NonNull Button wholeList) {
     this.rootView = rootView;
     this.WillGoBtn = WillGoBtn;
     this.events = events;
     this.fabButton = fabButton;
     this.horizontalRecyclerView = horizontalRecyclerView;
     this.inProgress = inProgress;
-    this.linearLayout = linearLayout;
     this.progressBAr = progressBAr;
     this.verticalRecyclerView = verticalRecyclerView;
-    this.view = view;
     this.wholeList = wholeList;
   }
 
@@ -128,12 +119,6 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.linearLayout;
-      LinearLayout linearLayout = rootView.findViewById(id);
-      if (linearLayout == null) {
-        break missingId;
-      }
-
       id = R.id.progressBAr;
       ProgressBar progressBAr = rootView.findViewById(id);
       if (progressBAr == null) {
@@ -146,12 +131,6 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.view;
-      View view = rootView.findViewById(id);
-      if (view == null) {
-        break missingId;
-      }
-
       id = R.id.wholeList;
       Button wholeList = rootView.findViewById(id);
       if (wholeList == null) {
@@ -159,8 +138,7 @@ public final class FragmentHomeBinding implements ViewBinding {
       }
 
       return new FragmentHomeBinding((RelativeLayout) rootView, WillGoBtn, events, fabButton,
-          horizontalRecyclerView, inProgress, linearLayout, progressBAr, verticalRecyclerView, view,
-          wholeList);
+          horizontalRecyclerView, inProgress, progressBAr, verticalRecyclerView, wholeList);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

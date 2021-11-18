@@ -72,7 +72,7 @@ public class GroupsAdapter extends RecyclerView.Adapter<GroupsAdapter.MyViewHold
         in.putExtra("interest",gr.interest);
         in.putExtra("category",gr.category);
 //        in.putExtra("userImg0",gr.users.get(0).imgUri);
-
+//
 //         if (gr.users.size()==2){
 //             in.putExtra("userImg1",gr.users.get(1).imgUri);
 //         } else if (gr.users.size() == 3) {

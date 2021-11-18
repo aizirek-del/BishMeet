@@ -49,6 +49,7 @@
             android:layout_width="match_parent"
             app:helperTextEnabled="true"
             app:helperText="Введите ваш E-mail"
+            android:layout_marginTop="25dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             >
 
@@ -73,6 +74,7 @@
             app:helperText="Введите ваш пароль"
             app:counterEnabled="true"
             app:counterMaxLength="20"
+            android:layout_marginTop="10dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
 
             >
@@ -97,6 +99,8 @@
             app:helperTextEnabled="true"
             app:helperText=" Повторите пароль"
             app:counterMaxLength="20"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="16dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
 
             >

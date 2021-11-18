@@ -190,7 +190,7 @@ public class Event_detailed extends AppCompatActivity {
         ev_titleOf_gr.setText(event.groupData.title);
 
 
-//        Picasso.get().load(Uri.parse(event.groupData.imageUri)).into(group_img);
+        Picasso.get().load(Uri.parse(event.groupData.imageUri)).into(group_img);
 //        List<User> list = event.users.entrySet().stream().map(o -> o.getValue()).collect(Collectors.toList());
 //        if (list.size() != 0) {
 //            Picasso.get().load(Uri.parse(list.get(0).imgUri)).into(partic_foto1);

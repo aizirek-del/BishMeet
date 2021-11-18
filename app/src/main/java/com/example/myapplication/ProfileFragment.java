@@ -18,6 +18,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -96,7 +97,12 @@ public class ProfileFragment extends Fragment {
                 myProfileName.setText(user.name);
                 MyProfileSurname.setText(user.surname);
                 MyProfileCity.setText(user.city);
-//                Picasso.get().load(Uri.parse(user.imgUri)).into(myProfile_Foto);
+
+                Glide.with(getContext())
+                        .load(user.imgUri)
+                        .centerCrop()
+                        .into(myProfile_Foto);
+
             }
 
             @Override

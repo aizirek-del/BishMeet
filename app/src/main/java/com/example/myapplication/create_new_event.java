@@ -163,16 +163,12 @@ public class create_new_event extends AppCompatActivity {
                 datePickerDialog.show();
             }
         });
-        hour_time.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                hour = calendar.get(Calendar.HOUR_OF_DAY);
-                minute = calendar.get(Calendar.MINUTE);
-                hour_time.setText(SimpleDateFormat.getTimeInstance().format(calendar.getTime()));
+//        hour = calendar.get(Calendar.HOUR_OF_DAY);
+//                minute = calendar.get(Calendar.MINUTE);
+//                hour_time.setText());
 
 
-            }
-        });
+
 
     }
 
